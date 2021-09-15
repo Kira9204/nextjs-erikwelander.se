@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import Layout from '../components/globals/page-layout';
 import { NextPageContext } from 'next';
 
 interface MyAppProps extends AppProps {
-    uaString: string;
+  uaString: string;
 }
 
 const MyApp = ({ Component, pageProps, uaString }: MyAppProps) => {
+  // Make sure that we always have a language path in our route
+  // (Url bar change only)
+  const router = useRouter();
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (!path.startsWith('/en') && !path.startsWith('/sv')) {
+      let newUrl = router.locale + router.asPath;
+      if (newUrl.charAt(newUrl.length - 1) === '/') {
+        newUrl = newUrl.substring(0, newUrl.length - 1);
+      }
+
+      window.history.replaceState(null, window.document.title, newUrl);
+    }
+  }, [router.asPath, router.locale]);
+
   return (
     <>
       <Layout uaString={uaString}>

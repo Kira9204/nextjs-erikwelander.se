@@ -81,7 +81,7 @@ const Page = ({ pageKey, children }: iPageTabsProps) => {
   const router = useRouter();
 
   return (
-    <Link href={pageKey}>
+    <Link href={`/${router.locale}${pageKey}`} locale={false}>
       <a>
         <PageTabStyle>
           {children}

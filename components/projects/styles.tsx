@@ -15,6 +15,7 @@ export const ProjectContainer = styled.div`
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 100%;
+    margin-left: 10px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
@@ -32,6 +33,14 @@ export const ProjectImagesContainer = styled.div`
   float: right;
   margin-right: ${PAGE_MARGIN * 2}px;
   margin-left: ${PAGE_MARGIN * 2}px;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const ProjectTextContainer = styled.div`
@@ -41,11 +50,31 @@ export const ProjectTextContainer = styled.div`
 
   /* Preserve newlines */
   white-space: pre-line;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    margin-top: 0;
+    font-size: 18px;
+  }
 `;
 
 export const ProjectTextHeader = styled.strong`
   display: block;
   font-size: 20px;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 20px;
+  }
 `;
 
 export const ProjectListItem = styled.li`
@@ -68,7 +97,7 @@ export const ImgObs = styled.img.attrs({ src: '/img/jpg/obs-screenshot.jpg', alt
 
 export const ImgTimberwolf = styled.img.attrs({ src: '/img/jpg/timberwolf.jpg', alt: '/img/jpg/timberwolf.jpg' })`
   margin-right: 10px;
-  
+
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 300px;
   }

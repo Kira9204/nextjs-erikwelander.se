@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import {
   COLOR_GRAY_BORDER,
   COLOR_WHITE_BACKGROUND,
-  SIZE_PAD_IPAD_LANDSCAPE,
   SIZE_PAD_IPAD_PORTRAIT,
-  SIZE_PAD_IPAD_PRO_LANDSCAPE,
-  SIZE_PAD_IPAD_PRO_PORTRAIT,
   SIZE_PC_LANDSCAPE,
   SIZE_PHONE_LANDSCAPE,
   SIZE_PHONE_PORTRAIT,
@@ -35,22 +32,34 @@ export const ProfileContainerStyle = styled.div`
 
 const PROFILE_PICTURE_SIZE = 250;
 export const ProfilePictureStyle = styled.div`
-  height: ${PROFILE_PICTURE_SIZE}px;
   border-radius: 25px;
   border: 4px solid ${COLOR_GRAY_BORDER};
   padding: 10px;
   background-repeat: no-repeat;
   background-position: center;
   background-clip: content-box;
-  background-size: ${PROFILE_PICTURE_SIZE}px ${PROFILE_PICTURE_SIZE}px;
   background-image: url(../img/png/erik-welander.png);
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    width: unset;
+    height: ${PROFILE_PICTURE_SIZE - 50}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
   }
 
   @media (min-width: ${SIZE_PHONE_LANDSCAPE}px) {
-    width: ${PROFILE_PICTURE_SIZE}px;
+    width: ${PROFILE_PICTURE_SIZE - 50}px;
+    height: ${PROFILE_PICTURE_SIZE - 50}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    height: ${PROFILE_PICTURE_SIZE - 50}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    width: ${PROFILE_PICTURE_SIZE - 20}px;
+    height: ${PROFILE_PICTURE_SIZE - 20}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 20}px ${PROFILE_PICTURE_SIZE - 20}px;
   }
 `;
 
@@ -118,16 +127,34 @@ export const ProfileArrowGridContainerLeftStyle = styled.div`
 `;
 
 export const ProfileArrowGridNameStyle = styled.h1`
-  font-size: 32px;
   text-transform: uppercase;
   font-weight: 400;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 26px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 28px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    font-size: 30px;
+  }
 `;
 
 export const ProfileArrowOccupationStyle = styled.h2`
-  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   margin-top: 15px;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 22px;
+  }
 `;
 
 export const ProfileQuoteStyle = styled.h3`
@@ -147,7 +174,7 @@ export const ProfileArrowContactStyle = styled.div`
   }
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    margin-left: 10px;
+    margin-left: 16px;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
@@ -158,8 +185,19 @@ export const ProfileArrowContactStyle = styled.div`
 const IMAGE_SIZE = 48;
 export const ProfileArrowContactImageStyle = styled.img`
   width: ${IMAGE_SIZE}px;
-  height: ${IMAGE_SIZE}px;
   vertical-align: middle;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 14}px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 10}px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    width: ${IMAGE_SIZE - 5}px;
+  }
 `;
 
 export const ProfileArrowContactTextStyle = styled.span`
@@ -169,11 +207,15 @@ export const ProfileArrowContactTextStyle = styled.span`
   margin-left: 10px;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 22px;
+    font-size: 18px;
   }
 
-  @media (min-width: ${SIZE_PHONE_LANDSCAPE}px) {
-    font-size: 24px;
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    font-size: 22px;
   }
 `;
 
@@ -208,7 +250,7 @@ export const CVSectionDownloadContainerStyle = styled.div`
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     position: relative;
-    left: 15px;
+    left: 18px;
     margin-bottom: 20px;
   }
 
@@ -223,12 +265,36 @@ export const CVSectionDownloadContainerStyle = styled.div`
 export const CVSectionDownloadImageStyle = styled.img`
   width: 40px;
   vertical-align: middle;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 14}px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 10}px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    width: ${IMAGE_SIZE - 5}px;
+  }
 `;
 
 export const CVSectionDownloadTextStyle = styled.span`
   margin-left: 10px;
   vertical-align: middle;
   text-decoration: underline;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    font-size: 22px;
+  }
 `;
 
 export const CVSectionContainerStyle = styled.div`
@@ -249,8 +315,19 @@ export const CVSectionBubbleStyle = styled.div`
 `;
 
 export const CVSectionBubbleImageStyle = styled.img`
-  width: 40px;
   vertical-align: middle;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 12}px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 8}px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    width: ${IMAGE_SIZE - 3}px;
+  }
 `;
 
 export const CVSectionBubbleTextStyle = styled.span`
@@ -282,10 +359,18 @@ export const CVSectionTableStyle = styled.table`
 
 export const CVSectionColumnPeriodStyle = styled.td`
   width: 250px;
-  font-size: 24px;
   letter-spacing: 1px;
   padding: 0;
   vertical-align: top;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 16px;
+  }
 `;
 
 export const CVSectionRowContentStyle = styled.tr`
@@ -294,7 +379,7 @@ export const CVSectionRowContentStyle = styled.tr`
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
-    display: unset;
+    display: table-row;
   }
 `;
 
@@ -303,13 +388,29 @@ export const CVSectionColumnContentStyle = styled.td`
 `;
 
 export const CVSectionPositionStyle = styled.div`
-  font-size: 24px;
   font-weight: bold;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 16px;
+  }
 `;
 
 export const CVSectionCompanyStyle = styled.div`
-  font-size: 22px;
   font-weight: normal;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 16px;
+  }
 `;
 
 export const CVSectionCompanyLinkStyle = styled.a`
@@ -317,14 +418,21 @@ export const CVSectionCompanyLinkStyle = styled.a`
 `;
 
 export const CVSectionPositionTags = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
 `;
 
 export const CVSectionPositionText = styled.div`
   margin-top: 6px;
-  margin-bottom: 40px;
-  font-size: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 16px;
+  }
 
   /* Preserve newlines */
   white-space: pre-line;

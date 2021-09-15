@@ -88,6 +88,7 @@ const Resume: NextPage = () => {
         </CVSectionContainerStyle>
         <CVSectionTableContainerStyle>
           <CVSectionTableStyle>
+            <tbody>
             <CVRow
               period={'2018-01 -> 2022-01'}
               title={t.RESUME_SECTION_WORK_EXPERIENCE_1_TITLE}
@@ -240,6 +241,7 @@ const Resume: NextPage = () => {
             >
               {t.RESUME_SECTION_WORK_EXPERIENCE_8_TEXT}
             </CVRow>
+            </tbody>
           </CVSectionTableStyle>
         </CVSectionTableContainerStyle>
 
@@ -253,6 +255,7 @@ const Resume: NextPage = () => {
         </CVSectionContainerStyle>
         <CVSectionTableContainerStyle>
           <CVSectionTableStyle>
+            <tbody>
             <CVRow
               period={'2014-08 -> 2016-05'}
               title={t.RESUME_SECTION_EDUCATION_1_TITLE}
@@ -300,6 +303,7 @@ const Resume: NextPage = () => {
             >
               {t.RESUME_SECTION_EDUCATION_3_TEXT}
             </CVRow>
+            </tbody>
           </CVSectionTableStyle>
         </CVSectionTableContainerStyle>
 
@@ -313,6 +317,7 @@ const Resume: NextPage = () => {
         </CVSectionContainerStyle>
         <CVSectionTableContainerStyle>
           <CVSectionTableStyle>
+            <tbody>
             <CVRow
               period={'2012 ->'}
               title={t.RESUME_SECTION_NON_PROFIT_1_TITLE}
@@ -360,6 +365,7 @@ const Resume: NextPage = () => {
             >
               {t.RESUME_SECTION_NON_PROFIT_3_TEXT}
             </CVRow>
+            </tbody>
           </CVSectionTableStyle>
         </CVSectionTableContainerStyle>
       </CVContainerStyle>

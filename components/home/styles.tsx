@@ -23,42 +23,76 @@ export const ProfileContainerStyle = styled.div`
 
 const PROFILE_PICTURE_SIZE = 300;
 export const ProfilePictureStyle = styled.div`
-  width: ${PROFILE_PICTURE_SIZE}px;
-  height: ${PROFILE_PICTURE_SIZE}px;
   border-radius: 50%;
   border: 2px solid ${COLOR_GRAY_BORDER};
   padding: 10px;
   background-repeat: no-repeat;
   background-position: center;
   background-clip: content-box;
-  background-size: ${PROFILE_PICTURE_SIZE}px ${PROFILE_PICTURE_SIZE}px;
   background-image: url(../img/png/erik-welander.png);
   margin: 0 auto;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    width: ${PROFILE_PICTURE_SIZE - 100}px;
+    height: ${PROFILE_PICTURE_SIZE - 100}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 100}px ${PROFILE_PICTURE_SIZE - 100}px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    width: ${PROFILE_PICTURE_SIZE - 50}px;
+    height: ${PROFILE_PICTURE_SIZE - 50}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
+  }
+
+  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
+    width: ${PROFILE_PICTURE_SIZE - 20}px;
+    height: ${PROFILE_PICTURE_SIZE - 20}px;
+    background-size: ${PROFILE_PICTURE_SIZE - 20}px ${PROFILE_PICTURE_SIZE - 20}px;
+  }
 `;
 
 const FONT_WEIGHT = 400;
 export const ProfilePictureNameStyle = styled.h1`
   margin-top: 20px;
-
-  font-size: 32px;
   text-transform: uppercase;
   font-weight: ${FONT_WEIGHT};
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 28px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 30px;
+  }
 `;
 
 export const ProfilePictureOccupationStyle = styled.h2`
   margin-top: 10px;
 
-  font-size: 24px;
   font-style: normal;
   font-weight: ${FONT_WEIGHT};
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 22px;
+  }
 `;
 
 export const ProfilePictureQuoteStyle = styled.h3`
   margin-top: 5px;
-
-  font-size: 16px;
   font-style: italic;
   font-weight: ${FONT_WEIGHT};
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 14px;
+  }
 `;
 
 export const ContactItemsSpacingStyle = styled.div`
@@ -71,16 +105,21 @@ export const ContactItemsStyle = styled.div`
   grid-row-gap: 20px;
   margin: 0 auto;
 
-  @media (min-width: ${SIZE_PHONE_IPHONEX_PORTRAIT}px) {
-    width: 100%;
-    grid-template-columns: 33% 33% 33%;
-  }
-
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px),
     (min-width: ${SIZE_PHONE_LANDSCAPE}px),
     (min-width: ${SIZE_PHONE_IPHONE_PORTRAIT}px and min-height: ${SIZE_PHONE_IPHONE_LANDSCAPE}px) {
     width: 100%;
     grid-template-columns: 50% 50%;
+  }
+
+  @media (min-width: ${SIZE_PHONE_IPHONEX_PORTRAIT}px) {
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_LANDSCAPE}px) {
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
@@ -98,9 +137,15 @@ export const ContactItemStyle = styled.div`
 const IMAGE_SIZE = 64;
 export const ContactItemImageStyle = styled.img`
   display: block;
-  width: ${IMAGE_SIZE}px;
-  height: ${IMAGE_SIZE}px;
   margin: 0 auto;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 14}px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    width: ${IMAGE_SIZE - 10}px;
+  }
 `;
 
 export const ContactItemTextStyle = styled.div`
@@ -109,8 +154,19 @@ export const ContactItemTextStyle = styled.div`
   font-size: 20px;
   margin-top: 10px;
   text-align: center;
-  height: ${IMAGE_SIZE}px;
   word-break: break-all;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px),
+    (min-width: ${SIZE_PHONE_LANDSCAPE}px),
+    (min-width: ${SIZE_PHONE_IPHONE_PORTRAIT}px and min-height: ${SIZE_PHONE_IPHONE_LANDSCAPE}px) {
+    height: ${IMAGE_SIZE - 14}px;
+    font-size: 16px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    height: ${IMAGE_SIZE - 14}px;
+    font-size: 18px;
+  }
 `;
 
 export const IntroductionStyle = styled.div`
@@ -143,6 +199,13 @@ export const IntroductionStyle = styled.div`
 `;
 
 export const IntroductionFirstWordStyle = styled.h4`
-  font-size: 32px;
   font-weight: normal;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 32px;
+  }
 `;

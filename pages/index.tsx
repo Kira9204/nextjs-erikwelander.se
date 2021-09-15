@@ -14,7 +14,6 @@ import {
 } from '../components/home/styles';
 import { ContactItem } from '../components/home/components';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import getLang from '../locales/lang';
 
 const Home: NextPage = () => {

@@ -19,7 +19,7 @@ const LanguageStyle = styled.img`
 const Language = ({ imgSrc, lang }: { imgSrc: string; lang: string }) => {
   const router = useRouter();
   return (
-    <Link href={router.asPath} locale={lang}>
+    <Link href={`/${lang}${router.asPath}`} locale={false}>
       <a style={{ textDecoration: 'underline' }}>
         <LanguageStyle src={imgSrc} alt={imgSrc} />
       </a>
