@@ -28,13 +28,13 @@ const Projects: NextPage = () => {
           </a>
           <ProjectTextContainer>
             <ProjectTextHeader>{t.PROJECTS_1_TITLE}</ProjectTextHeader>
-            {t.PROJECTS_1_1_TEXT}
+            <p>{t.PROJECTS_1_1_TEXT}</p>
             <ul>
               <ProjectListItem>{t.PROJECTS_1_2_TEXT}</ProjectListItem>
               <ProjectListItem>{t.PROJECTS_1_3_TEXT}</ProjectListItem>
               <ProjectListItem>{t.PROJECTS_1_4_TEXT}</ProjectListItem>
             </ul>
-            {t.PROJECTS_1_5_TEXT}
+            <p>{t.PROJECTS_1_5_TEXT}</p>
           </ProjectTextContainer>
         </Project>
       </ProjectContainer>
@@ -48,12 +48,14 @@ const Projects: NextPage = () => {
           </a>
           <ProjectTextContainer>
             <ProjectTextHeader>{t.PROJECTS_2_TITLE}</ProjectTextHeader>
-            {t.PROJECTS_2_1_TEXT}&nbsp;
-            <a href={'https://www.linkedin.com/in/viktor-welander-9b7298156/'} target={'_blank'} rel={'noreferrer'}>
-              <LinkUnderlined>Viktor Welander</LinkUnderlined>
-            </a>
-            &nbsp;
-            {t.PROJECTS_2_2_TEXT}
+            <p>
+              {t.PROJECTS_2_1_TEXT}&nbsp;
+              <a href={'https://www.linkedin.com/in/viktor-welander-9b7298156/'} target={'_blank'} rel={'noreferrer'}>
+                <LinkUnderlined>Viktor Welander</LinkUnderlined>
+              </a>
+              &nbsp;
+              {t.PROJECTS_2_2_TEXT}
+            </p>
           </ProjectTextContainer>
         </Project>
       </ProjectContainer>

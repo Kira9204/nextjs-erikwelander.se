@@ -176,7 +176,7 @@ export const ProfileArrowContactStyle = styled.div`
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
     margin-left: 0;
     padding-bottom: 15px;
-    
+
     &:first-of-type {
       padding-top: 14px;
     }
@@ -334,6 +334,14 @@ export const CVSectionBubbleImageStyle = styled.img`
 export const CVSectionBubbleTextStyle = styled.span`
   margin-left: 10px;
   vertical-align: middle;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 22px;
+  }
 `;
 
 export const CVSectionBubbleFillLineStyle = styled.div`
@@ -365,12 +373,12 @@ export const CVSectionColumnPeriodStyle = styled.td`
   vertical-align: top;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -392,25 +400,26 @@ export const CVSectionPositionStyle = styled.div`
   font-weight: bold;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
 export const CVSectionCompanyStyle = styled.div`
   font-weight: normal;
+  margin-bottom: 4px;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 8px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -419,20 +428,27 @@ export const CVSectionCompanyLinkStyle = styled.a`
 `;
 
 export const CVSectionPositionTags = styled.div`
-  font-size: 18px;
   font-style: italic;
-`;
-
-export const CVSectionPositionText = styled.div`
-  margin-top: 6px;
-  margin-bottom: 20px;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 18px;
+  }
+`;
+
+export const CVSectionPositionText = styled.div`
+  margin-bottom: 20px;
+
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     font-size: 16px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 18px;
   }
 
   /* Preserve newlines */
