@@ -19,14 +19,6 @@ export const ProfileContainerStyle = styled.div`
 
   @media (min-width: ${SIZE_PHONE_LANDSCAPE}px) {
     display: flex;
-    margin-left: ${PAGE_MARGIN / 2}px;
-    margin-right: ${PAGE_MARGIN / 2}px;
-  }
-
-  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    display: flex;
-    margin-left: ${PAGE_MARGIN}px;
-    margin-right: ${PAGE_MARGIN}px;
   }
 `;
 
@@ -41,17 +33,21 @@ export const ProfilePictureStyle = styled.div`
   background-image: url(../img/png/erik-welander.png);
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
     background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
+    margin: 0 auto;
   }
 
   @media (min-width: ${SIZE_PHONE_LANDSCAPE}px) {
     width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
     background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
+    margin: 0;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
     background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
   }

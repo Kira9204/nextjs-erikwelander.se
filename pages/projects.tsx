@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 import {
   InitialContentSpacingStyle,
   Project,
-  ProjectImagesContainer,
   ProjectListItem,
   ProjectContainer,
   ProjectTextContainer,
@@ -24,9 +23,9 @@ const Projects: NextPage = () => {
       <InitialContentSpacingStyle />
       <ProjectContainer>
         <Project>
-          <ProjectImagesContainer>
+          <a href={'/img/png/obs-screenshot-full.png'} target={'_blank'} rel="noreferrer">
             <ImgObs />
-          </ProjectImagesContainer>
+          </a>
           <ProjectTextContainer>
             <ProjectTextHeader>{t.PROJECTS_1_TITLE}</ProjectTextHeader>
             {t.PROJECTS_1_1_TEXT}
@@ -41,10 +40,12 @@ const Projects: NextPage = () => {
       </ProjectContainer>
       <ProjectContainer>
         <Project>
-          <ProjectImagesContainer>
+          <a href={'/img/jpg/timberwolf-full.jpg'} target={'_blank'} rel="noreferrer">
             <ImgTimberwolf />
+          </a>
+          <a href={'/img/jpg/wallpaper-mechwarrior-timberwolf-full.jpg'} target={'_blank'} rel="noreferrer">
             <ImgTimberwolfWallPaper />
-          </ProjectImagesContainer>
+          </a>
           <ProjectTextContainer>
             <ProjectTextHeader>{t.PROJECTS_2_TITLE}</ProjectTextHeader>
             {t.PROJECTS_2_1_TEXT}&nbsp;

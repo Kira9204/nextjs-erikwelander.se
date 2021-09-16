@@ -171,8 +171,6 @@ export const ContactItemTextStyle = styled.div`
 
 export const IntroductionStyle = styled.div`
   margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: 400;

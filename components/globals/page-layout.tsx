@@ -7,7 +7,6 @@ import PageHead from './page-head';
 import PageParticles from './page-particles';
 import PageToolbar from './page-toolbar';
 import PageMain from './page-main';
-import { NextPageContext } from 'next';
 
 const GlobalStyle = createGlobalStyle`
 html,

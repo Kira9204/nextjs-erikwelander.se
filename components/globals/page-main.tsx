@@ -4,8 +4,10 @@ import {
   COLOR_GRAY_BACKGROUND,
   COLOR_WHITE_BACKGROUND,
   SIZE_PAD_IPAD_LANDSCAPE,
+  SIZE_PAD_IPAD_PORTRAIT,
   SIZE_PAD_IPAD_PRO_LANDSCAPE,
   SIZE_PAD_IPAD_PRO_PORTRAIT,
+  SIZE_PHONE_LANDSCAPE,
   SIZE_PHONE_PORTRAIT,
 } from './constants';
 import PageLanguage from './page-language';
@@ -28,11 +30,16 @@ const PageLetterStyle = styled.div`
   border: 4px solid ${COLOR_GRAY_BACKGROUND};
   border-radius: 20px;
   background-color: ${COLOR_WHITE_BACKGROUND};
-
   position: relative;
   z-index: 1;
-
   margin: 0 auto;
+  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
+    padding: 0 10px;
+  }
+
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    padding: 0 20px;
+  }
 `;
 
 const PageMain = ({ children }: { children: ReactNode }): JSX.Element => {

@@ -6,8 +6,6 @@ export const InitialContentSpacingStyle = styled.div`
   margin-top: 50px;
 `;
 
-const PAGE_MARGIN = 25;
-
 export const ProjectContainer = styled.div`
   margin: 0 auto;
   font-size: 18px;
@@ -15,13 +13,10 @@ export const ProjectContainer = styled.div`
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 100%;
-    margin-left: 10px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     display: flex;
-    margin-left: ${PAGE_MARGIN}px;
-    margin-right: ${PAGE_MARGIN}px;
   }
 `;
 
@@ -29,51 +24,34 @@ export const Project = styled.div`
   width: 100%;
 `;
 
-export const ProjectImagesContainer = styled.div`
-  float: right;
-  margin-right: ${PAGE_MARGIN * 2}px;
-  margin-left: ${PAGE_MARGIN * 2}px;
-
-  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    margin-bottom: 10px;
-  }
-
-  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    margin-bottom: 10px;
-  }
-`;
-
 export const ProjectTextContainer = styled.div`
   float: none;
   margin-right: 40px;
-  font-size: 20px;
+  font-size: 16px;
 
   /* Preserve newlines */
   white-space: pre-line;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     margin-top: 0;
-    font-size: 18px;
   }
 `;
 
 export const ProjectTextHeader = styled.strong`
   display: block;
-  font-size: 20px;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 
@@ -81,13 +59,18 @@ export const ProjectListItem = styled.li`
   margin-bottom: 10px;
 `;
 
-export const ImgObs = styled.img.attrs({ src: '/img/jpg/obs-screenshot.jpg', alt: '/img/jpg/obs-screenshot.jpg' })`
+export const ImgObs = styled.img.attrs({ src: '/img/png/obs-screenshot.png', alt: '/img/png/obs-screenshot.png' })`
+  float: right;
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 300px;
+    margin-right: 50px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     width: 400px;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
@@ -96,14 +79,17 @@ export const ImgObs = styled.img.attrs({ src: '/img/jpg/obs-screenshot.jpg', alt
 `;
 
 export const ImgTimberwolf = styled.img.attrs({ src: '/img/jpg/timberwolf.jpg', alt: '/img/jpg/timberwolf.jpg' })`
-  margin-right: 10px;
+  float: right;
+  margin-left: 10px;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 300px;
+    margin-right: 50px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     width: 400px;
+    margin-right: 0;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
@@ -112,16 +98,22 @@ export const ImgTimberwolf = styled.img.attrs({ src: '/img/jpg/timberwolf.jpg', 
 `;
 
 export const ImgTimberwolfWallPaper = styled.img.attrs({
-  src: '/img/jpg/mechwarrior-timberwolf.jpg',
-  alt: '/img/jpg/mechwarrior-timberwolf.jpg',
+  src: '/img/jpg/wallpaper-mechwarrior-timberwolf.jpg',
+  alt: '/img/jpg/wallpaper-mechwarrior-timberwolf.jpg',
 })`
+  float: right;
+
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     display: block;
     width: 300px;
+    margin-right: 50px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     width: 400px;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {

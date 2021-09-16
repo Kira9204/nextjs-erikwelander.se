@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import {
   COLOR_BLACK_BACKGROUND,
-  COLOR_ORANGE,
+  COLOR_TOOLBAR_ACTIVE,
+  COLOR_TOOLBAR_INACTIVE,
   COLOR_WHITE_TEXT_1,
   MARGIN_LAYOUT,
   SIZE_PAD_IPAD_LANDSCAPE,
@@ -40,10 +41,12 @@ const PageTabsContainerStyle = styled.div`
 `;
 
 const PageTabsStyle = styled.div`
+  margin-top: 0;
+  padding: 10px 0 10px 0;
   width: 100%;
   background-color: ${COLOR_BLACK_BACKGROUND};
   color: ${COLOR_WHITE_TEXT_1};
-  border-radius: 20px;
+  border-radius: 0 0 8px 8px;
   font-size: 26px;
 
   display: flex;
@@ -57,18 +60,15 @@ const PageTabsStyle = styled.div`
 `;
 
 const PageTabStyle = styled.div`
-  margin: 0;
   font-weight: bold;
-  height: 44px;
-  width: 90px;
   text-align: center;
 `;
 
-const PageTabCurrentStyle = styled.div`
+const PageTabCurrentStyle = styled.div<{ isCurrent: boolean }>`
   margin-top: 5px;
   width: 100%;
   height: 4px;
-  background-color: ${COLOR_ORANGE};
+  background-color: ${(props) => (props.isCurrent ? COLOR_TOOLBAR_ACTIVE : COLOR_TOOLBAR_INACTIVE)};
   border-radius: 20px;
 `;
 
@@ -85,7 +85,7 @@ const Page = ({ pageKey, children }: iPageTabsProps) => {
       <a>
         <PageTabStyle>
           {children}
-          {router.pathname === pageKey && <PageTabCurrentStyle />}
+          <PageTabCurrentStyle isCurrent={router.pathname === pageKey} />
         </PageTabStyle>
       </a>
     </Link>

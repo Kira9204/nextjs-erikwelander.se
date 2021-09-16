@@ -4,8 +4,9 @@ export const COLOR_WHITE_BACKGROUND = '#f2f2f2';
 export const COLOR_WHITE_TEXT_1 = '#e6e9e8';
 export const COLOR_BLACK_BACKGROUND = '#3a3a3a';
 export const COLOR_GRAY_BACKGROUND = '#555454FF';
-export const COLOR_ORANGE = '#ff9500';
 export const COLOR_GRAY_BORDER = '#dcdada';
+export const COLOR_TOOLBAR_ACTIVE = '#ff9500';
+export const COLOR_TOOLBAR_INACTIVE = '#818181';
 
 export const MARGIN_LAYOUT = 80;
 
