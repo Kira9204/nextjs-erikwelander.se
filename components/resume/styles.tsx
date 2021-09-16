@@ -175,6 +175,11 @@ export const ProfileArrowContactStyle = styled.div`
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
     margin-left: 0;
+    padding-bottom: 15px;
+    
+    &:first-of-type {
+      padding-top: 14px;
+    }
   }
 `;
 
