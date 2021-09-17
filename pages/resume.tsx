@@ -28,7 +28,7 @@ import { ContactItem, CVRow } from '../components/resume/components';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import getLang from '../locales/lang';
-import { LinkUnderlined } from '../components/globals/styles';
+import { LinkUnderlined, LinkUnderlineItalic } from '../components/globals/styles';
 
 const Resume: NextPage = () => {
   const router = useRouter();
@@ -126,12 +126,12 @@ const Resume: NextPage = () => {
                     target={'_blank'}
                     rel="noreferrer"
                   >
-                    Insight Asset Management for Jira
+                    &quot;Insight Asset Management for Jira&quot;
                   </LinkUnderlined>
                   &nbsp;{t.DEVELOPER_AT}&nbsp;
-                  <LinkUnderlined href={'https://www.atlassian.com/'} target={'_blank'} rel="noreferrer">
+                  <LinkUnderlineItalic href={'https://www.atlassian.com/'} target={'_blank'} rel="noreferrer">
                     Atlassian.
-                  </LinkUnderlined>
+                  </LinkUnderlineItalic>
                   <br />
                   {t.RESUME_SECTION_WORK_EXPERIENCE_1_TEXT}
                 </>
