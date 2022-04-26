@@ -43,8 +43,12 @@ const EN = {
   INDEX_INTRODUCTION_CONTACT_ME_2_1: 'If you are looking for a',
   INDEX_INTRODUCTION_CONTACT_ME_2_2: 'overview, check out the resume section.',
   RESUME_SECTION_WORK_EXPERIENCE: 'Work Experience',
-  RESUME_SECTION_WORK_EXPERIENCE_1_TITLE: 'Full Stack Systems Engineer / Developer',
-  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: `My journey with Atlassian started at a small, but quickly growing company called Riada Development AB.
+  RESUME_SECTION_WORK_EXPERIENCE_1_TITLE: 'Software Engineer (Fullstack)',
+  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: ` provides restaurant owners with a full suite of tools to run and optimize their business.
+   We provide everything from Mobile Apps, to POS systems, easy ordering, and payment systems.
+  My work here mainly focuses on building a new PWA app to replace the current React-Native app, as well as breaking up larger services into micro-services using a mix of NodeJS and Spring Boot (Java).`,
+  RESUME_SECTION_WORK_EXPERIENCE_2_TITLE: 'Full Stack Systems Engineer / Developer',
+  RESUME_SECTION_WORK_EXPERIENCE_2_TEXT: `My journey with Atlassian started at a small, but quickly growing company called Riada Development AB.
   At the time, we were about 10 people in rather small office, but we were growing at an exponential rate.
   As our company grew the number of developers quickly doubled, we got new offices, new structures, and a lot of big exciting projects.
   Insight is the parent to all of those projects, and is a testament to the excellence of the company and all of my fellow colleges.
@@ -58,42 +62,42 @@ const EN = {
   Our hosting relied on Docker/Kubernetes and amazon AWS. And our front-end contained the latest that the Javascript/Typescript world had to offer in terms of features and frameworks.
   Mindville AB is as of summer 2020 a part of Atlassian, with swedish offices closing in January 2022.
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_2_TITLE: 'Developer',
-  RESUME_SECTION_WORK_EXPERIENCE_2_TEXT: `Shopello is an online shopping API used by a number of sites and partners to drive shopping traffic to different web-stores based on a cost-per-click model.
+  RESUME_SECTION_WORK_EXPERIENCE_3_TITLE: 'Developer',
+  RESUME_SECTION_WORK_EXPERIENCE_3_TEXT: `Shopello is an online shopping API used by a number of sites and partners to drive shopping traffic to different web-stores based on a cost-per-click model.
   During my time at Shopello we've made many of the systems several times faster and partook in several large, if not complete re-writes. We also added new functionality that enabled us to manage much larger volumes of traffic, which in turn have allowed us to establish ourselves in new countries. My duties also included improving our feed management for our customers, keeping things running smoothly and making sure our traffic doesn't include bots. The role has been a large growing point for me and I've learned many new development concepts and technologies. During my time at the company we unfortunately got into SEO and partner issues, and after a company merger and several cuts, me and several of my colleges had to leave.`,
-  RESUME_SECTION_WORK_EXPERIENCE_3_TITLE: 'Junior Developer',
-  RESUME_SECTION_WORK_EXPERIENCE_3_TEXT: `Clinicbuddy works within the health services business to manage reservations, journals, payments and document PDF generations.
+  RESUME_SECTION_WORK_EXPERIENCE_4_TITLE: 'Junior Developer',
+  RESUME_SECTION_WORK_EXPERIENCE_4_TEXT: `Clinicbuddy works within the health services business to manage reservations, journals, payments and document PDF generations.
   My work here includes integrations against payment and bill services, external systems like hearing tests, data import and conversions between various databases and programs like Lotusnotes as well as scripts to generate PDF documents based on form data.
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_4_TITLE: 'Android Developer, Linux Developer',
-  RESUME_SECTION_WORK_EXPERIENCE_4_TEXT: `Android developer for a project known as "Exqube", an IOT solution for measuring and storing various data about connected devices.
+  RESUME_SECTION_WORK_EXPERIENCE_5_TITLE: 'Android Developer, Linux Developer',
+  RESUME_SECTION_WORK_EXPERIENCE_5_TEXT: `Android developer for a project known as "Exqube", an IOT solution for measuring and storing various data about connected devices.
   The application consists of a background-service that communicates via bluetooth in order to measure values from our connected box that can replicate things like car dashboards.
   I've also developed a number of smaller projects delivered as embedded systems using Raspberry PI:s (GPIO).
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_5_TITLE: 'IT Consultant',
-  RESUME_SECTION_WORK_EXPERIENCE_5_TAG: 'Computers and store equipment',
-  RESUME_SECTION_WORK_EXPERIENCE_5_TEXT: `Fujitsu Sweden AB technician.
+  RESUME_SECTION_WORK_EXPERIENCE_6_TITLE: 'IT Consultant',
+  RESUME_SECTION_WORK_EXPERIENCE_6_TAG: 'Computers and store equipment',
+  RESUME_SECTION_WORK_EXPERIENCE_6_TEXT: `Fujitsu Sweden AB technician.
 Installation of new payment terminals and store equipment at night time.
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_6_TITLE: 'IT Consultant',
-  RESUME_SECTION_WORK_EXPERIENCE_6_TAG: 'Computer hardware',
-  RESUME_SECTION_WORK_EXPERIENCE_6_TEXT: `Tekniker åt Fujitsu Sweden AB.
-  Working at SEB (Swedish bank) replacing equipment.
-`,
   RESUME_SECTION_WORK_EXPERIENCE_7_TITLE: 'IT Consultant',
   RESUME_SECTION_WORK_EXPERIENCE_7_TAG: 'Computer hardware',
   RESUME_SECTION_WORK_EXPERIENCE_7_TEXT: `Tekniker åt Fujitsu Sweden AB.
   Working at SEB (Swedish bank) replacing equipment.
 `,
-  RESUME_SECTION_WORK_EXPERIENCE_8_TITLE: 'Webmaster',
-  RESUME_SECTION_WORK_EXPERIENCE_8_TEXT: 'Website developer',
+  RESUME_SECTION_WORK_EXPERIENCE_8_TITLE: 'IT Consultant',
+  RESUME_SECTION_WORK_EXPERIENCE_8_TAG: 'Computer hardware',
+  RESUME_SECTION_WORK_EXPERIENCE_8_TEXT: `Tekniker åt Fujitsu Sweden AB.
+  Working at SEB (Swedish bank) replacing equipment.
+`,
+  RESUME_SECTION_WORK_EXPERIENCE_9_TITLE: 'Webmaster',
+  RESUME_SECTION_WORK_EXPERIENCE_9_TEXT: 'Website developer',
   RESUME_SECTION_EDUCATION: 'Education',
   RESUME_SECTION_EDUCATION_1_TITLE: 'Systems Engineer',
   RESUME_SECTION_EDUCATION_1_TAG_DATABASES: 'Databases',
   RESUME_SECTION_EDUCATION_1_TAG_WEB_DEVELOPMENT: 'Web Development',
   RESUME_SECTION_EDUCATION_1_TAG_TESTING: 'Testing',
   RESUME_SECTION_EDUCATION_1_TEXT: `A very hands on practical education with a large focus on competing code assignments from other developers and speakers.
-  We had several assignments from diffrent companies involving writing backend services in Java with jersey and spring.
+  We had several assignments from different companies involving writing backend services in Java with jersey and spring.
   `,
   RESUME_SECTION_EDUCATION_2_TITLE: 'Computer Science 180HP',
   RESUME_SECTION_EDUCATION_2_OS_DESIGN: 'Operating systems design and threading',
@@ -195,8 +199,11 @@ const SV = {
   INDEX_INTRODUCTION_CONTACT_ME_2_1: 'Om du letar efter en',
   INDEX_INTRODUCTION_CONTACT_ME_2_2: 'överblick, ta en titt på resumé sidan.',
   RESUME_SECTION_WORK_EXPERIENCE: 'Arbetslivserfarenhet',
-  RESUME_SECTION_WORK_EXPERIENCE_1_TITLE: 'Full Stack Systemutvecklare / Utvecklare',
-  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: `Min resa till Atlassian började på ett litet, men snabbt växande företag som kallades Riada Development AB.
+  RESUME_SECTION_WORK_EXPERIENCE_1_TITLE: 'Software Engineer (Fullstack)',
+  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: ` förser restauranger med en mängd kraftfulla verktyg för att effektivt och digitalt driva sina verksamheter. Vi erbjuder allt från mobil-appar till POS och beställnings system såväl som enkla betal-lösningar.
+  Mitt fokus ligger på att utveckla en ny PWA mobil-app (React) som skall ersätta den tidiare appen byggd i React Native. Fokus ligger även på att bygga nya mikro-tjänster samt att byta ut tidigare monoliter till mindre mikro-tjänster. Dessa är gjorda i en blanding av NodeJS och Spring Boot (Java).`,
+  RESUME_SECTION_WORK_EXPERIENCE_2_TITLE: 'Full Stack Systemutvecklare / Utvecklare',
+  RESUME_SECTION_WORK_EXPERIENCE_2_TEXT: `Min resa till Atlassian började på ett litet, men snabbt växande företag som kallades Riada Development AB.
   I början var vi runt 10 utvecklare, men vi växte snabbt till det dubbla, tillsammans med nya kontor, nya rutiner och en hel del större spännande projekt.
   
   Insight är resultatet utav dessa projekt, och påvisar vad ett fantastiskt företag med tillgivna utvecklare kan åstakomma.
@@ -209,37 +216,37 @@ const SV = {
   Vi använde oss mycket utav Docker/Kubernetes och Amazon AWS för att leverera ut produkten till kund (Insight Cloud). På front-end sidan så använde vi oss också utav det senaste som Javascript/Typescript hade att erbjuda gällade syntax, functionalitet och ramverk.
   Mindville AB är sedan sommaren 2020 en del utav Atlassian, och kontoret i Sverige stängs i Januari 2022.   
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_2_TITLE: 'Utvecklare',
-  RESUME_SECTION_WORK_EXPERIENCE_2_TEXT: `Shopello utveklar ett API inom e-handeln där vi driver trafik till ett flertal partners baserat på en "kostnad per klick" modell.
+  RESUME_SECTION_WORK_EXPERIENCE_3_TITLE: 'Utvecklare',
+  RESUME_SECTION_WORK_EXPERIENCE_3_TEXT: `Shopello utveklar ett API inom e-handeln där vi driver trafik till ett flertal partners baserat på en "kostnad per klick" modell.
    Utöver att tillhandahålla API:er mot partners så finns det även ett större antal hemsidor som underhålls.
    
   Under min tid på shopello så har vi gjort väldigt stora prestandaförbättringar inom plattformen och utökat dess funktionalitet. Vilket låtit oss att lansera i flera nya länder och hantera mycket större volymer data och trafik.
   Utöver utvecklingen av plattformen så har mina uppdrag involverat partnersupport och sett till att partners interna varulistor fungerat korrekt och att trafiken påfrestats av bottar. Positionen har haft en enormt växande roll där jag har fått lära mig nya utvecklingskoncept och ramverk. Under min tid som anställd så tvingades bolagen gå ihop pga nedskärningar och SEO problem, där nedskärningarna drabbade flertalet anställda inklusive mig.`,
-  RESUME_SECTION_WORK_EXPERIENCE_3_TITLE: 'Junior Utvecklare',
-  RESUME_SECTION_WORK_EXPERIENCE_3_TEXT: `Clinicbuddy jobbar inom hälso- och sjukvården med att hantera bokningar, journaler, filer, betalningar och generering av PDF dokument.
+  RESUME_SECTION_WORK_EXPERIENCE_4_TITLE: 'Junior Utvecklare',
+  RESUME_SECTION_WORK_EXPERIENCE_4_TEXT: `Clinicbuddy jobbar inom hälso- och sjukvården med att hantera bokningar, journaler, filer, betalningar och generering av PDF dokument.
   Mina huvudsakliga uppgifer var integrationer mot betalsystem/faktureringstjänster, externa system som hörseltest, import/konverting utav diverse data mellan olika databaser och programvaror som Lotusnotes samt att skriva script som generarade pdf doukment.
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_4_TITLE: 'Android-utvecklare, Linux-utvecklare',
-  RESUME_SECTION_WORK_EXPERIENCE_4_TEXT: `Android utvecklare till projektet "Exqube", en IOT lösning för att mäta, logga och övervaka enheter. Applikationen består av en bakgrundstjänst som kommunicerar via bluetooth för att övervaka olika mätvärden.
+  RESUME_SECTION_WORK_EXPERIENCE_5_TITLE: 'Android-utvecklare, Linux-utvecklare',
+  RESUME_SECTION_WORK_EXPERIENCE_5_TEXT: `Android utvecklare till projektet "Exqube", en IOT lösning för att mäta, logga och övervaka enheter. Applikationen består av en bakgrundstjänst som kommunicerar via bluetooth för att övervaka olika mätvärden.
 Gränsnittet presenterar den rapporterade datan i varierande former, i ett lättöverskådligt och anpassningsbart format som t.ex bilars instrument brädor.
 Linux utvecklare till ett antal mindre projekt där tjänster levererats med Raspberry PIs (GPIO).`,
-  RESUME_SECTION_WORK_EXPERIENCE_5_TITLE: 'IT Konsult',
-  RESUME_SECTION_WORK_EXPERIENCE_5_TAG: 'Datorer och butiks-utrustning',
-  RESUME_SECTION_WORK_EXPERIENCE_5_TEXT: `Tekniker åt Fujitsu Sverige AB.
+  RESUME_SECTION_WORK_EXPERIENCE_6_TITLE: 'IT Konsult',
+  RESUME_SECTION_WORK_EXPERIENCE_6_TAG: 'Datorer och butiks-utrustning',
+  RESUME_SECTION_WORK_EXPERIENCE_6_TEXT: `Tekniker åt Fujitsu Sverige AB.
   Utbyte/installation utav kassasystem/butiksutrustning nattetid.
   `,
-  RESUME_SECTION_WORK_EXPERIENCE_6_TITLE: 'IT Consultant',
-  RESUME_SECTION_WORK_EXPERIENCE_6_TAG: 'Dator-utrustning',
-  RESUME_SECTION_WORK_EXPERIENCE_6_TEXT: `Tekniker åt Fujitsu Sverige AB.
-  Utbyte/Refresh utav SEB dator-utrustning.
-`,
   RESUME_SECTION_WORK_EXPERIENCE_7_TITLE: 'IT Consultant',
   RESUME_SECTION_WORK_EXPERIENCE_7_TAG: 'Dator-utrustning',
   RESUME_SECTION_WORK_EXPERIENCE_7_TEXT: `Tekniker åt Fujitsu Sverige AB.
   Utbyte/Refresh utav SEB dator-utrustning.
 `,
-  RESUME_SECTION_WORK_EXPERIENCE_8_TITLE: 'Webmaster',
-  RESUME_SECTION_WORK_EXPERIENCE_8_TEXT: 'Vidareutveckling utav hemsida.',
+  RESUME_SECTION_WORK_EXPERIENCE_8_TITLE: 'IT Consultant',
+  RESUME_SECTION_WORK_EXPERIENCE_8_TAG: 'Dator-utrustning',
+  RESUME_SECTION_WORK_EXPERIENCE_8_TEXT: `Tekniker åt Fujitsu Sverige AB.
+  Utbyte/Refresh utav SEB dator-utrustning.
+`,
+  RESUME_SECTION_WORK_EXPERIENCE_9_TITLE: 'Webmaster',
+  RESUME_SECTION_WORK_EXPERIENCE_9_TEXT: 'Vidareutveckling utav hemsida.',
   RESUME_SECTION_EDUCATION: 'Utbildning',
   RESUME_SECTION_EDUCATION_1_TITLE: 'Systemutvecklare 400YH',
   RESUME_SECTION_EDUCATION_1_TEXT: `En väldigt praktiskt "hands on" utbildning där ett stort fokus legat på att fullfölja projekt från andra utvecklare och talare.

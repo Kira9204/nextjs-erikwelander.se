@@ -90,8 +90,36 @@ const Resume: NextPage = () => {
           <CVSectionTableStyle>
             <tbody>
               <CVRow
-                period={'2018-01 -> 2022-01'}
+                period={'2022-02 -> '}
                 title={t.RESUME_SECTION_WORK_EXPERIENCE_1_TITLE}
+                companies={[
+                  {
+                    name: 'Leeroy Group AB',
+                    link: `https://leeroy.se/products/?lang=${l}`,
+                  },
+                ]}
+                tags={[
+                  'Java',
+                  'Spring',
+                  'Javascript',
+                  'Typescript',
+                  'React',
+                ]}
+              >
+                <>
+                  <LinkUnderlined
+                    href={`https://leeroy.se/products/?lang=${l}`}
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    Leeroy
+                  </LinkUnderlined>
+                  {t.RESUME_SECTION_WORK_EXPERIENCE_1_TEXT}
+                </>
+              </CVRow>
+              <CVRow
+                period={'2018-01 -> 2022-01'}
+                title={t.RESUME_SECTION_WORK_EXPERIENCE_2_TITLE}
                 companies={[
                   {
                     name: 'Riada Development AB',
@@ -133,12 +161,12 @@ const Resume: NextPage = () => {
                     Atlassian.
                   </LinkUnderlineItalic>
                   <br />
-                  {t.RESUME_SECTION_WORK_EXPERIENCE_1_TEXT}
+                  {t.RESUME_SECTION_WORK_EXPERIENCE_2_TEXT}
                 </>
               </CVRow>
               <CVRow
                 period={'2017-02 -> 2017-12'}
-                title={t.RESUME_SECTION_WORK_EXPERIENCE_2_TITLE}
+                title={t.RESUME_SECTION_WORK_EXPERIENCE_3_TITLE}
                 companies={[
                   {
                     name: 'Shopello',
@@ -151,11 +179,11 @@ const Resume: NextPage = () => {
                 ]}
                 tags={['PHP', 'Laravel', 'MySQL', 'Redis', 'Slim', 'Twig', 'DBAL', 'Code Igniter', 'Javascript']}
               >
-                {t.RESUME_SECTION_WORK_EXPERIENCE_2_TEXT}
+                {t.RESUME_SECTION_WORK_EXPERIENCE_3_TEXT}
               </CVRow>
               <CVRow
                 period={'2016-09 -> 2017-01'}
-                title={t.RESUME_SECTION_WORK_EXPERIENCE_3_TITLE}
+                title={t.RESUME_SECTION_WORK_EXPERIENCE_4_TITLE}
                 companies={[
                   {
                     name: 'Clinicbuddy',
@@ -164,11 +192,11 @@ const Resume: NextPage = () => {
                 ]}
                 tags={['PHP', 'MySQL', 'Javascript', 'JQuery']}
               >
-                {t.RESUME_SECTION_WORK_EXPERIENCE_3_TEXT}
+                {t.RESUME_SECTION_WORK_EXPERIENCE_4_TEXT}
               </CVRow>
               <CVRow
                 period={'2015-10 -> 2016-05'}
-                title={t.RESUME_SECTION_WORK_EXPERIENCE_4_TITLE}
+                title={t.RESUME_SECTION_WORK_EXPERIENCE_5_TITLE}
                 companies={[
                   {
                     name: 'Scandinavian Technical Solutions AB (STSolutions)',
@@ -177,27 +205,10 @@ const Resume: NextPage = () => {
                 ]}
                 tags={['Java', 'Android', 'Linux']}
               >
-                {t.RESUME_SECTION_WORK_EXPERIENCE_4_TEXT}
-              </CVRow>
-              <CVRow
-                period={'2015-08 -> 2015-10'}
-                title={t.RESUME_SECTION_WORK_EXPERIENCE_5_TITLE}
-                companies={[
-                  {
-                    name: 'Academic Work',
-                    link: 'https://www.academicwork.com/',
-                  },
-                  {
-                    name: 'Fujitsu Sweden',
-                    link: 'https://www.fujitsu.com/',
-                  },
-                ]}
-                tags={[t.RESUME_SECTION_WORK_EXPERIENCE_5_TAG]}
-              >
                 {t.RESUME_SECTION_WORK_EXPERIENCE_5_TEXT}
               </CVRow>
               <CVRow
-                period={'2014-06 -> 2014-12'}
+                period={'2015-08 -> 2015-10'}
                 title={t.RESUME_SECTION_WORK_EXPERIENCE_6_TITLE}
                 companies={[
                   {
@@ -211,10 +222,10 @@ const Resume: NextPage = () => {
                 ]}
                 tags={[t.RESUME_SECTION_WORK_EXPERIENCE_6_TAG]}
               >
-                {t.RESUME_SECTION_WORK_EXPERIENCE_6_TEXT}
+                {t.RESUME_SECTION_WORK_EXPERIENCE_5_TEXT}
               </CVRow>
               <CVRow
-                period={'2013-09 -> 2013-11'}
+                period={'2014-06 -> 2014-12'}
                 title={t.RESUME_SECTION_WORK_EXPERIENCE_7_TITLE}
                 companies={[
                   {
@@ -228,11 +239,28 @@ const Resume: NextPage = () => {
                 ]}
                 tags={[t.RESUME_SECTION_WORK_EXPERIENCE_7_TAG]}
               >
-                {t.RESUME_SECTION_WORK_EXPERIENCE_6_TEXT}
+                {t.RESUME_SECTION_WORK_EXPERIENCE_7_TEXT}
+              </CVRow>
+              <CVRow
+                period={'2013-09 -> 2013-11'}
+                title={t.RESUME_SECTION_WORK_EXPERIENCE_8_TITLE}
+                companies={[
+                  {
+                    name: 'Academic Work',
+                    link: 'https://www.academicwork.com/',
+                  },
+                  {
+                    name: 'Fujitsu Sweden',
+                    link: 'https://www.fujitsu.com/',
+                  },
+                ]}
+                tags={[t.RESUME_SECTION_WORK_EXPERIENCE_8_TAG]}
+              >
+                {t.RESUME_SECTION_WORK_EXPERIENCE_8_TEXT}
               </CVRow>
               <CVRow
                 period={'2012-12 -> 2013-02'}
-                title={t.RESUME_SECTION_WORK_EXPERIENCE_8_TITLE}
+                title={t.RESUME_SECTION_WORK_EXPERIENCE_9_TITLE}
                 companies={[
                   {
                     name: 'Knivkultur Sverige AB',
@@ -241,7 +269,7 @@ const Resume: NextPage = () => {
                 ]}
                 tags={['PHP']}
               >
-                {t.RESUME_SECTION_WORK_EXPERIENCE_8_TEXT}
+                {t.RESUME_SECTION_WORK_EXPERIENCE_9_TEXT}
               </CVRow>
             </tbody>
           </CVSectionTableStyle>
