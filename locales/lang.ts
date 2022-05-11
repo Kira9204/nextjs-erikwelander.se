@@ -44,9 +44,12 @@ const EN = {
   INDEX_INTRODUCTION_CONTACT_ME_2_2: 'overview, check out the resume section.',
   RESUME_SECTION_WORK_EXPERIENCE: 'Work Experience',
   RESUME_SECTION_WORK_EXPERIENCE_1_TITLE: 'Software Engineer (Fullstack)',
-  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: ` provides restaurant owners with a full suite of tools to run and optimize their business.
+  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: `Leeroy provides restaurant owners with a full suite of tools to run and optimize their business.
    We provide everything from Mobile Apps, to POS systems, easy ordering, and payment systems.
-  My work here mainly focuses on building a new PWA app to replace the current React-Native app, as well as breaking up larger services into micro-services using a mix of NodeJS and Spring Boot (Java).`,
+  My work here mainly focuses on building a new PWA app to replace the current React-Native app, as well as breaking up larger services into micro-services using a mix of NodeJS and Spring Boot (Java).
+  Leeroy is a small company, and since my start there has been a shift in management with a new ceo and large budget cuts.
+  With several people loosing their positions including me.
+  `,
   RESUME_SECTION_WORK_EXPERIENCE_2_TITLE: 'Full Stack Systems Engineer / Developer',
   RESUME_SECTION_WORK_EXPERIENCE_2_TEXT: `My journey with Atlassian started at a small, but quickly growing company called Riada Development AB.
   At the time, we were about 10 people in rather small office, but we were growing at an exponential rate.
@@ -200,8 +203,11 @@ const SV = {
   INDEX_INTRODUCTION_CONTACT_ME_2_2: 'överblick, ta en titt på resumé sidan.',
   RESUME_SECTION_WORK_EXPERIENCE: 'Arbetslivserfarenhet',
   RESUME_SECTION_WORK_EXPERIENCE_1_TITLE: 'Software Engineer (Fullstack)',
-  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: ` förser restauranger med en mängd kraftfulla verktyg för att effektivt och digitalt driva sina verksamheter. Vi erbjuder allt från mobil-appar till POS och beställnings system såväl som enkla betal-lösningar.
-  Mitt fokus ligger på att utveckla en ny PWA mobil-app (React) som skall ersätta den tidiare appen byggd i React Native. Fokus ligger även på att bygga nya mikro-tjänster samt att byta ut tidigare monoliter till mindre mikro-tjänster. Dessa är gjorda i en blanding av NodeJS och Spring Boot (Java).`,
+  RESUME_SECTION_WORK_EXPERIENCE_1_TEXT: `Leeroy förser restauranger med en mängd kraftfulla verktyg för att effektivt och digitalt driva sina verksamheter. Vi erbjuder allt från mobil-appar till POS och beställnings system såväl som enkla betal-lösningar.
+  Mitt fokus ligger på att utveckla en ny PWA mobil-app (React) som skall ersätta den tidiare appen byggd i React Native. Fokus ligger även på att bygga nya mikro-tjänster samt att byta ut tidigare monoliter till mindre mikro-tjänster. Dessa är gjorda i en blanding av NodeJS och Spring Boot (Java).
+  Leeroy är ett litet företag som genomgår stora förändringar med ny ceo och en minskad budget.
+  Ett flertal personer däribland jag själv måste lämna företaget inom en snar framtid.   
+  `,
   RESUME_SECTION_WORK_EXPERIENCE_2_TITLE: 'Full Stack Systemutvecklare / Utvecklare',
   RESUME_SECTION_WORK_EXPERIENCE_2_TEXT: `Min resa till Atlassian började på ett litet, men snabbt växande företag som kallades Riada Development AB.
   I början var vi runt 10 utvecklare, men vi växte snabbt till det dubbla, tillsammans med nya kontor, nya rutiner och en hel del större spännande projekt.

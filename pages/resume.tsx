@@ -53,8 +53,8 @@ const Resume: NextPage = () => {
               <ProfileQuoteStyle>{t.PERSONAL_QUOTE}</ProfileQuoteStyle>
             </ProfileArrowGridContainerLeftStyle>
             <div>
-              <ContactItem href={'tel:+46737471410'} img={'/img/png/phone.png'}>
-                +46737471410
+              <ContactItem href={'tel:+46703268343'} img={'/img/png/phone.png'}>
+                +4670-326-83-43
               </ContactItem>
               <ContactItem href={'mailto:erik.welander@hotmail.com'} img={'/img/png/outlook.png'}>
                 erik.welander@hotmail.com
@@ -98,24 +98,9 @@ const Resume: NextPage = () => {
                     link: `https://leeroy.se/products/?lang=${l}`,
                   },
                 ]}
-                tags={[
-                  'Java',
-                  'Spring',
-                  'Javascript',
-                  'Typescript',
-                  'React',
-                ]}
+                tags={['Java', 'Spring', 'Javascript', 'Typescript', 'React']}
               >
-                <>
-                  <LinkUnderlined
-                    href={`https://leeroy.se/products/?lang=${l}`}
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    Leeroy
-                  </LinkUnderlined>
-                  {t.RESUME_SECTION_WORK_EXPERIENCE_1_TEXT}
-                </>
+                {t.RESUME_SECTION_WORK_EXPERIENCE_1_TEXT}
               </CVRow>
               <CVRow
                 period={'2018-01 -> 2022-01'}

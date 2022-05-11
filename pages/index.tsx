@@ -43,8 +43,8 @@ const Home: NextPage = () => {
           <br />
           kira#0005
         </ContactItem>
-        <ContactItem href={'tel:+46737471410'} img={'/img/png/phone.png'}>
-          +46737471410
+        <ContactItem href={'tel:+46703268343'} img={'/img/png/phone.png'}>
+          +4670-326-83-43
         </ContactItem>
         <ContactItem href={'https://chat.google.com/'} img={'/img/png/google-chat.png'}>
           Google Chat
