@@ -20,11 +20,11 @@ const PageHead = () => {
 
       <meta property="og:title" content={t.PAGE_TITLE} />
       <meta property="og:description" content={t.PAGE_DESCRIPTION} />
-      <meta property="og:image" content={`${domain}/img/jpg/page-preview.jpg`} />
+      <meta property="og:image" content={`${domain}/img/jpg/page-preview-2.jpg`} />
       <meta property="og:url" content={domain} />
 
       <link href="https://erikwelander.se" rel="canonical" />
-      <link rel="icon" href="img/png/erik-welander-icon.png" type="image/png" />
+      <link rel="icon" href="img/jpg/erik-welander-2-icon.jpg" type="image/jpg" />
       <title>{t.PAGE_TITLE}</title>
     </Head>
   );

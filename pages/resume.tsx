@@ -53,8 +53,8 @@ const Resume: NextPage = () => {
               <ProfileQuoteStyle>{t.PERSONAL_QUOTE}</ProfileQuoteStyle>
             </ProfileArrowGridContainerLeftStyle>
             <div>
-              <ContactItem href={'tel:+46703268343'} img={'/img/png/phone.png'}>
-                +4670-326-83-43
+              <ContactItem href={'tel:+46737471410'} img={'/img/png/phone.png'}>
+                +46737471410
               </ContactItem>
               <ContactItem href={'mailto:erik.welander@hotmail.com'} img={'/img/png/outlook.png'}>
                 erik.welander@hotmail.com

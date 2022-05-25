@@ -29,7 +29,7 @@ export const ProfilePictureStyle = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-clip: content-box;
-  background-image: url(../img/png/erik-welander.png);
+  background-image: url(../img/jpg/erik-welander-2.jpg);
   margin: 0 auto;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
