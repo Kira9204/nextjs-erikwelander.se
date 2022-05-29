@@ -17,7 +17,9 @@ import { useRouter } from 'next/router';
 import getLang from '../locales/lang';
 
 const Home: NextPage = () => {
-  const t = getLang(useRouter());
+  const router = useRouter();
+  const t = getLang(router);
+  const l = router.locale || 'en';
 
   return (
     <>
@@ -44,7 +46,7 @@ const Home: NextPage = () => {
           kira#0005
         </ContactItem>
         <ContactItem href={'tel:+46737471410'} img={'/img/png/phone.png'}>
-          +46737471410
+          {t.PHONE_NUMBER}
         </ContactItem>
         <ContactItem href={'https://chat.google.com/'} img={'/img/png/google-chat.png'}>
           Google Chat

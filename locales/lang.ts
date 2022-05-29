@@ -3,6 +3,7 @@ import { NextRouter } from 'next/router';
 const EN = {
   PAGE_TITLE: 'Erik Welander - Personal web page',
   PAGE_DESCRIPTION: 'Personal web page of Erik Welander',
+  PHONE_NUMBER: '+46-73-747-1410',
   ALGORITHMS: 'Algorithms',
   OCCUPATION_1: 'Full Stack Systems Engineer.',
   OCCUPATION_2: 'Frontend, backend, and every unix system in-between',
@@ -160,6 +161,7 @@ If you are intrested, send him a message, as he is looking for new projects to t
 const SV = {
   PAGE_TITLE: 'Erik Welander - Personlig hemsida',
   PAGE_DESCRIPTION: 'Personlig hemsida av Erik Welander',
+  PHONE_NUMBER: '073-747-1410',
   ALGORITHMS: 'Algoritmer',
   OCCUPATION_1: 'Full stack Systemutvecklare',
   OCCUPATION_2: 'Frontend, backend, och alla unix system däremellan',

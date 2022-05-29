@@ -54,7 +54,7 @@ const Resume: NextPage = () => {
             </ProfileArrowGridContainerLeftStyle>
             <div>
               <ContactItem href={'tel:+46737471410'} img={'/img/png/phone.png'}>
-                +46737471410
+                {t.PHONE_NUMBER}
               </ContactItem>
               <ContactItem href={'mailto:erik.welander@hotmail.com'} img={'/img/png/outlook.png'}>
                 erik.welander@hotmail.com
