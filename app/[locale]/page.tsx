@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import {
   ContactItemsStyle,
   ContactItemsSpacingStyle,
@@ -24,7 +24,6 @@ import twitterIcon from '../../assets/img/png/twitter.png';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'common' });
   const tHome = await getTranslations({ locale, namespace: 'home' });
 
@@ -39,9 +38,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           Welander
         </ProfilePictureNameStyle>
         <ProfilePictureOccupationStyle>
-          {t('OCCUPATION_1')}
+          {t('OCCUPATION_TITLE')}
           <br />
-          {t('OCCUPATION_2')}
+          {t('OCCUPATION_SUBTITLE')}
         </ProfilePictureOccupationStyle>
         <ProfilePictureQuoteStyle>{t('PERSONAL_QUOTE')}</ProfilePictureQuoteStyle>
       </ProfileContainerStyle>
@@ -79,22 +78,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </ContactItem>
       </ContactItemsStyle>
       <IntroductionStyle>
-        <IntroductionFirstWordStyle>{tHome('HI')}</IntroductionFirstWordStyle>
-        <p>{tHome('INDEX_INTRODUCTION_1')}</p>
-        {tHome('INDEX_INTRODUCTION_2')}
+        <IntroductionFirstWordStyle>{tHome('GREETING')}</IntroductionFirstWordStyle>
+        <p>{tHome('INTRODUCTION_BIO_TEXT')}</p>
+        {tHome('INTRODUCTION_HOBBIES_INTRO')}
         <ul>
-          <li>{tHome('INDEX_INTRODUCTION_LIST_ITEM_1')}</li>
-          <li>{tHome('INDEX_INTRODUCTION_LIST_ITEM_2')}</li>
-          <li>{tHome('INDEX_INTRODUCTION_LIST_ITEM_3')}</li>
-          <li>{tHome('INDEX_INTRODUCTION_LIST_ITEM_4')}</li>
-          <li>{tHome('INDEX_INTRODUCTION_LIST_ITEM_5')}</li>
-          <li>{tHome('INDEX_INTRODUCTION_LIST_ITEM_6')}</li>
+          <li>{tHome('INTRODUCTION_HOBBY_ANIME')}</li>
+          <li>{tHome('INTRODUCTION_HOBBY_STORY_GAMES')}</li>
+          <li>{tHome('INTRODUCTION_HOBBY_DIGITAL_ART')}</li>
+          <li>{tHome('INTRODUCTION_HOBBY_MECHS')}</li>
+          <li>{tHome('INTRODUCTION_HOBBY_ANIMALS')}</li>
+          <li>{tHome('INTRODUCTION_HOBBY_WALKS')}</li>
         </ul>
         <p>
-          {tHome('INDEX_INTRODUCTION_CONTACT_ME_1')}
+          {tHome('INTRODUCTION_CONTACT_INVITATION')}
           <br />
-          {tHome('INDEX_INTRODUCTION_CONTACT_ME_2_1')}&nbsp;<strong>{tHome('PROFESSIONAL')}</strong>&nbsp;
-          {tHome('INDEX_INTRODUCTION_CONTACT_ME_2_2')}
+          {tHome('INTRODUCTION_CONTACT_RESUME_PROMPT_PREFIX')}&nbsp;<strong>{tHome('PROFESSIONAL')}</strong>&nbsp;
+          {tHome('INTRODUCTION_CONTACT_RESUME_PROMPT_SUFFIX')}
         </p>
         <p>
           <i>Kira Kira</i>

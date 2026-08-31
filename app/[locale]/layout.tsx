@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { headers } from 'next/headers';
 import { useUserAgent as parseUserAgent } from 'next-useragent';
@@ -52,8 +52,6 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Enable static rendering for this request's locale
-  setRequestLocale(locale);
 
   // Detect device type server-side (used to skip the heavy particle animation on mobile)
   const hdrs = await headers();

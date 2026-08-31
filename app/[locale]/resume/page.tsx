@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import {
   ProfileArrowStyle,
   ProfileArrowContentStyle,
@@ -37,7 +37,6 @@ import groupIcon from '../../../assets/img/svg/group.svg';
 
 export default async function Resume({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: l } = await params;
-  setRequestLocale(l);
   const t = await getTranslations({ locale: l, namespace: 'common' });
   const tr = await getTranslations({ locale: l, namespace: 'resume' });
 
@@ -52,9 +51,9 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
             <ProfileArrowGridContainerLeftStyle>
               <ProfileArrowGridNameStyle>Erik Welander</ProfileArrowGridNameStyle>
               <ProfileArrowOccupationStyle>
-                {t('OCCUPATION_1')}
+                {t('OCCUPATION_TITLE')}
                 <br />
-                {t('OCCUPATION_2')}
+                {t('OCCUPATION_SUBTITLE')}
               </ProfileArrowOccupationStyle>
               <ProfileQuoteStyle>{t('PERSONAL_QUOTE')}</ProfileQuoteStyle>
             </ProfileArrowGridContainerLeftStyle>
@@ -95,7 +94,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
             <tbody>
               <CVRow
                 period={'2022-06 -> '}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_1_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_TITLE')}
                 companies={[
                   {
                     name: 'Volvo Cars',
@@ -104,7 +103,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Javascript', 'Typescript', 'React', 'Java', 'Spring']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_1_1_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_1_TEXT')}
                 <LinkUnderlined
                   href={
                     l === 'en'
@@ -116,11 +115,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 >
                   Fleet Cars/Care by Volvo
                 </LinkUnderlined>
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_1_2_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_2_TEXT')}
               </CVRow>
               <CVRow
                 period={'2022-02 -> 2022-06'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_2_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_LEEROY_TITLE')}
                 companies={[
                   {
                     name: 'Leeroy Group AB',
@@ -129,11 +128,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'Spring', 'Javascript', 'Typescript', 'React']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_2_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_LEEROY_TEXT')}
               </CVRow>
               <CVRow
                 period={'2018-01 -> 2022-01'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_3_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_ATLASSIAN_INSIGHT_TITLE')}
                 companies={[
                   {
                     name: 'Riada Development AB',
@@ -175,12 +174,12 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     Atlassian.
                   </LinkUnderlineItalic>
                   <br />
-                  {tr('RESUME_SECTION_WORK_EXPERIENCE_3_TEXT')}
+                  {tr('RESUME_SECTION_WORK_EXPERIENCE_ATLASSIAN_INSIGHT_TEXT')}
                 </>
               </CVRow>
               <CVRow
                 period={'2017-02 -> 2017-12'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_4_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_SHOPELLO_TITLE')}
                 companies={[
                   {
                     name: 'Shopello',
@@ -193,11 +192,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['PHP', 'Laravel', 'MySQL', 'Redis', 'Slim', 'Twig', 'DBAL', 'Code Igniter', 'Javascript']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_4_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_SHOPELLO_TEXT')}
               </CVRow>
               <CVRow
                 period={'2016-09 -> 2017-01'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_5_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_CLINICBUDDY_TITLE')}
                 companies={[
                   {
                     name: 'Clinicbuddy',
@@ -206,11 +205,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['PHP', 'MySQL', 'Javascript', 'JQuery']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_5_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_CLINICBUDDY_TEXT')}
               </CVRow>
               <CVRow
                 period={'2015-10 -> 2016-05'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_6_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_STSOLUTIONS_TITLE')}
                 companies={[
                   {
                     name: 'Scandinavian Technical Solutions AB (STSolutions)',
@@ -219,11 +218,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'Android', 'Linux']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_6_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_STSOLUTIONS_TEXT')}
               </CVRow>
               <CVRow
                 period={'2015-08 -> 2015-10'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_7_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TITLE')}
                 companies={[
                   {
                     name: 'Academic Work',
@@ -234,13 +233,13 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     link: 'https://www.fujitsu.com/',
                   },
                 ]}
-                tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_7_TAG')]}
+                tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TAG')]}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_7_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TEXT')}
               </CVRow>
               <CVRow
                 period={'2014-06 -> 2014-12'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_8_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TITLE')}
                 companies={[
                   {
                     name: 'Academic Work',
@@ -251,13 +250,13 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     link: 'https://www.fujitsu.com/',
                   },
                 ]}
-                tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_8_TAG')]}
+                tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TAG')]}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_8_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TEXT')}
               </CVRow>
               <CVRow
                 period={'2013-09 -> 2013-11'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_9_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TITLE')}
                 companies={[
                   {
                     name: 'Academic Work',
@@ -268,13 +267,13 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     link: 'https://www.fujitsu.com/',
                   },
                 ]}
-                tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_9_TAG')]}
+                tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TAG')]}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_9_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TEXT')}
               </CVRow>
               <CVRow
                 period={'2012-12 -> 2013-02'}
-                title={tr('RESUME_SECTION_WORK_EXPERIENCE_10_TITLE')}
+                title={tr('RESUME_SECTION_WORK_EXPERIENCE_KNIVKULTUR_TITLE')}
                 companies={[
                   {
                     name: 'Knivkultur Sverige AB',
@@ -283,7 +282,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['PHP']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_10_TEXT')}
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_KNIVKULTUR_TEXT')}
               </CVRow>
             </tbody>
           </CVSectionTableStyle>
@@ -302,7 +301,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
             <tbody>
               <CVRow
                 period={'2014-08 -> 2016-05'}
-                title={tr('RESUME_SECTION_EDUCATION_1_TITLE')}
+                title={tr('RESUME_SECTION_EDUCATION_SYSTEMS_ENGINEER_TITLE')}
                 companies={[
                   {
                     name: 'YHC3L (Centrum För Livslångt Lärande)',
@@ -311,11 +310,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'Spring', 'Android', tr('DATABASES'), tr('WEB_DEVELOPMENT'), tr('TESTING'), 'Scrum']}
               >
-                {tr('RESUME_SECTION_EDUCATION_1_TEXT')}
+                {tr('RESUME_SECTION_EDUCATION_SYSTEMS_ENGINEER_TEXT')}
               </CVRow>
               <CVRow
                 period={'2012-09 -> 2014-08'}
-                title={tr('RESUME_SECTION_EDUCATION_2_TITLE')}
+                title={tr('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_TITLE')}
                 companies={[
                   {
                     name: 'Stockholm university',
@@ -328,15 +327,15 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                   'C++',
                   'Assembly',
                   tr('ALGORITHMS'),
-                  tr('RESUME_SECTION_EDUCATION_2_OS_DESIGN'),
+                  tr('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_OS_DESIGN'),
                   'Scrum',
                 ]}
               >
-                {tr('RESUME_SECTION_EDUCATION_2_TEXT')}
+                {tr('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_TEXT')}
               </CVRow>
               <CVRow
                 period={'2008-08 -> 2012-06'}
-                title={tr('RESUME_SECTION_EDUCATION_3_TITLE')}
+                title={tr('RESUME_SECTION_EDUCATION_TECHNOLOGY_PROGRAMMING_NETWORKS_TITLE')}
                 companies={[
                   {
                     name: 'THG',
@@ -345,7 +344,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'C#', 'C++', tr('WEB_DEVELOPMENT'), `${tr('NETWORKS')} CISCO CCNA 1-4`]}
               >
-                {tr('RESUME_SECTION_EDUCATION_3_TEXT')}
+                {tr('RESUME_SECTION_EDUCATION_TECHNOLOGY_PROGRAMMING_NETWORKS_TEXT')}
               </CVRow>
             </tbody>
           </CVSectionTableStyle>
@@ -364,7 +363,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
             <tbody>
               <CVRow
                 period={'2012 ->'}
-                title={tr('RESUME_SECTION_NON_PROFIT_1_TITLE')}
+                title={tr('RESUME_SECTION_NON_PROFIT_IX_BOARD_MEMBER_TITLE')}
                 companies={[
                   {
                     name: 'IX',
@@ -377,11 +376,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('TECHNOLOGY'), 'Linux']}
               >
-                {tr('RESUME_SECTION_NON_PROFIT_1_TEXT')}
+                {tr('RESUME_SECTION_NON_PROFIT_IX_BOARD_MEMBER_TEXT')}
               </CVRow>
               <CVRow
                 period={'2012 - 2015'}
-                title={tr('RESUME_SECTION_NON_PROFIT_2_TITLE')}
+                title={tr('RESUME_SECTION_NON_PROFIT_PROXXI_KEYHOLDER_TITLE')}
                 companies={[
                   {
                     name: 'Proxxi',
@@ -390,11 +389,11 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('ORGANIZATION'), tr('MEETUP')]}
               >
-                {tr('RESUME_SECTION_NON_PROFIT_2_TEXT')}
+                {tr('RESUME_SECTION_NON_PROFIT_PROXXI_KEYHOLDER_TEXT')}
               </CVRow>
               <CVRow
                 period={'2010 - 2015'}
-                title={tr('RESUME_SECTION_NON_PROFIT_3_TITLE')}
+                title={tr('RESUME_SECTION_NON_PROFIT_JOTI_NETWORK_OPERATOR_TITLE')}
                 companies={[
                   {
                     name: 'Mälarscouterna',
@@ -407,7 +406,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('NETWORKS'), tr('SERVERS')]}
               >
-                {tr('RESUME_SECTION_NON_PROFIT_3_TEXT')}
+                {tr('RESUME_SECTION_NON_PROFIT_JOTI_NETWORK_OPERATOR_TEXT')}
               </CVRow>
             </tbody>
           </CVSectionTableStyle>

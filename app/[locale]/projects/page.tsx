@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import {
   InitialContentSpacingStyle,
   Project,
@@ -15,7 +15,6 @@ import { LinkUnderlined } from '../../../components/globals/styles';
 
 export default async function Projects({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'projects' });
 
   return (
@@ -27,14 +26,14 @@ export default async function Projects({ params }: { params: Promise<{ locale: s
             <ImgObs />
           </a>
           <ProjectTextContainer>
-            <ProjectTextHeader>{t('PROJECTS_1_TITLE')}</ProjectTextHeader>
-            <p>{t('PROJECTS_1_1_TEXT')}</p>
+            <ProjectTextHeader>{t('PROJECT_STREAMING_SETUP_TITLE')}</ProjectTextHeader>
+            <p>{t('PROJECT_STREAMING_SETUP_INTRO_TEXT')}</p>
             <ul>
-              <ProjectListItem>{t('PROJECTS_1_2_TEXT')}</ProjectListItem>
-              <ProjectListItem>{t('PROJECTS_1_3_TEXT')}</ProjectListItem>
-              <ProjectListItem>{t('PROJECTS_1_4_TEXT')}</ProjectListItem>
+              <ProjectListItem>{t('PROJECT_STREAMING_SETUP_AUDIO_TEXT')}</ProjectListItem>
+              <ProjectListItem>{t('PROJECT_STREAMING_SETUP_SOFTWARE_TEXT')}</ProjectListItem>
+              <ProjectListItem>{t('PROJECT_STREAMING_SETUP_MOCAP_VR_TEXT')}</ProjectListItem>
             </ul>
-            <p>{t('PROJECTS_1_5_TEXT')}</p>
+            <p>{t('PROJECT_STREAMING_SETUP_VTUBER_TEXT')}</p>
           </ProjectTextContainer>
         </Project>
       </ProjectContainer>
@@ -47,9 +46,9 @@ export default async function Projects({ params }: { params: Promise<{ locale: s
             <ImgTimberwolfWallPaper />
           </a>
           <ProjectTextContainer>
-            <ProjectTextHeader>{t('PROJECTS_2_TITLE')}</ProjectTextHeader>
+            <ProjectTextHeader>{t('PROJECT_TIMBERWOLF_PRINT_TITLE')}</ProjectTextHeader>
             <p>
-              {t('PROJECTS_2_1_TEXT')}&nbsp;
+              {t('PROJECT_TIMBERWOLF_PRINT_DESCRIPTION_TEXT')}&nbsp;
               <LinkUnderlined
                 href={'https://www.linkedin.com/in/viktor-welander-9b7298156/'}
                 target={'_blank'}
@@ -58,7 +57,7 @@ export default async function Projects({ params }: { params: Promise<{ locale: s
                 Viktor Welander
               </LinkUnderlined>
               &nbsp;
-              {t('PROJECTS_2_2_TEXT')}
+              {t('PROJECT_TIMBERWOLF_PRINT_CREDIT_TEXT')}
             </p>
           </ProjectTextContainer>
         </Project>
