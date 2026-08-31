@@ -1,3 +1,5 @@
+'use client';
+
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import {
@@ -7,7 +9,6 @@ import {
   SIZE_PAD_IPAD_PORTRAIT,
   SIZE_PAD_IPAD_PRO_LANDSCAPE,
   SIZE_PAD_IPAD_PRO_PORTRAIT,
-  SIZE_PHONE_LANDSCAPE,
   SIZE_PHONE_PORTRAIT,
 } from './constants';
 import PageLanguage from './page-language';
@@ -42,7 +43,7 @@ const PageLetterStyle = styled.div`
   }
 `;
 
-const PageMain = ({ children }: { children: ReactNode }): JSX.Element => {
+const PageMain = ({ children }: { children: ReactNode }): React.JSX.Element => {
   return (
     <>
       <PageContainerStyle>

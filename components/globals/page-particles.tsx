@@ -1,6 +1,7 @@
+'use client';
+
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import { useUserAgent } from 'next-useragent';
 
 const colorParticle = '#ff9500';
 const spacing = 2560; //px
@@ -64,9 +65,8 @@ const GlobalParticles = createGlobalStyle`
 ${particleClasses()}
 `;
 
-const PageParticles = ({ uaString }: { uaString: string }) => {
-  const ua = useUserAgent(uaString);
-  if (!ua.isDesktop) {
+const PageParticles = ({ isDesktop }: { isDesktop: boolean }) => {
+  if (!isDesktop) {
     return <div />;
   }
 

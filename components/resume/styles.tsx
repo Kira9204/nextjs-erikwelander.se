@@ -1,5 +1,9 @@
+'use client';
+
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+import profilePicture from '../../assets/img/jpg/erik-welander-2.jpg';
 import {
   COLOR_GRAY_BORDER,
   COLOR_WHITE_BACKGROUND,
@@ -23,41 +27,47 @@ export const ProfileContainerStyle = styled.div`
 `;
 
 const PROFILE_PICTURE_SIZE = 250;
-export const ProfilePictureStyle = styled.div`
+const ProfilePictureWrapperStyle = styled.div`
+  position: relative;
+  overflow: hidden;
   border-radius: 25px;
   border: 4px solid ${COLOR_GRAY_BORDER};
   padding: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-clip: content-box;
-  background-image: url(../img/jpg/erik-welander-2.jpg);
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
     margin: 0 auto;
   }
 
   @media (min-width: ${SIZE_PHONE_LANDSCAPE}px) {
     width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
     margin: 0;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
     width: ${PROFILE_PICTURE_SIZE - 20}px;
     height: ${PROFILE_PICTURE_SIZE - 20}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 20}px ${PROFILE_PICTURE_SIZE - 20}px;
   }
 `;
+
+export const ProfilePictureStyle = () => (
+  <ProfilePictureWrapperStyle>
+    <Image
+      src={profilePicture}
+      alt="Erik Welander"
+      fill
+      style={{ objectFit: 'cover', borderRadius: '21px' }}
+      sizes="(min-width: 1400px) 230px, 200px"
+    />
+  </ProfilePictureWrapperStyle>
+);
 
 export const ProfileArrowStyle = styled.div`
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
@@ -184,8 +194,9 @@ export const ProfileArrowContactStyle = styled.div`
 `;
 
 const IMAGE_SIZE = 48;
-export const ProfileArrowContactImageStyle = styled.img`
+export const ProfileArrowContactImageStyle = styled(Image)`
   width: ${IMAGE_SIZE}px;
+  height: auto;
   vertical-align: middle;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
@@ -263,8 +274,9 @@ export const CVSectionDownloadContainerStyle = styled.div`
   }
 `;
 
-export const CVSectionDownloadImageStyle = styled.img`
+export const CVSectionDownloadImageStyle = styled(Image)`
   width: 40px;
+  height: auto;
   vertical-align: middle;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
@@ -315,8 +327,9 @@ export const CVSectionBubbleStyle = styled.div`
   width: fit-content;
 `;
 
-export const CVSectionBubbleImageStyle = styled.img`
+export const CVSectionBubbleImageStyle = styled(Image)`
   vertical-align: middle;
+  height: auto;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: ${IMAGE_SIZE - 12}px;

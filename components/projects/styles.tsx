@@ -1,6 +1,11 @@
-import React from 'react';
+'use client';
+
 import styled from 'styled-components';
+import Image from 'next/image';
 import { SIZE_PAD_IPAD_PORTRAIT, SIZE_PC_LANDSCAPE, SIZE_PHONE_PORTRAIT } from '../globals/constants';
+import obsScreenshot from '../../assets/img/png/obs-screenshot.png';
+import timberwolf from '../../assets/img/jpg/timberwolf.jpg';
+import timberwolfWallpaper from '../../assets/img/jpg/wallpaper-mechwarrior-timberwolf.jpg';
 
 export const InitialContentSpacingStyle = styled.div`
   margin-top: 50px;
@@ -59,8 +64,9 @@ export const ProjectListItem = styled.li`
   margin-bottom: 10px;
 `;
 
-export const ImgObs = styled.img.attrs({ src: '/img/png/obs-screenshot.png', alt: '/img/png/obs-screenshot.png' })`
+export const ImgObs = styled(Image).attrs({ src: obsScreenshot, alt: 'OBS Studio screenshot' })`
   float: right;
+  height: auto;
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 300px;
     margin-right: 50px;
@@ -78,9 +84,10 @@ export const ImgObs = styled.img.attrs({ src: '/img/png/obs-screenshot.png', alt
   }
 `;
 
-export const ImgTimberwolf = styled.img.attrs({ src: '/img/jpg/timberwolf.jpg', alt: '/img/jpg/timberwolf.jpg' })`
+export const ImgTimberwolf = styled(Image).attrs({ src: timberwolf, alt: 'Mechwarrior Timberwolf 3D print' })`
   float: right;
   margin-left: 10px;
+  height: auto;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: 300px;
@@ -97,11 +104,12 @@ export const ImgTimberwolf = styled.img.attrs({ src: '/img/jpg/timberwolf.jpg', 
   }
 `;
 
-export const ImgTimberwolfWallPaper = styled.img.attrs({
-  src: '/img/jpg/wallpaper-mechwarrior-timberwolf.jpg',
-  alt: '/img/jpg/wallpaper-mechwarrior-timberwolf.jpg',
+export const ImgTimberwolfWallPaper = styled(Image).attrs({
+  src: timberwolfWallpaper,
+  alt: 'Mechwarrior Timberwolf wallpaper',
 })`
   float: right;
+  height: auto;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     display: block;

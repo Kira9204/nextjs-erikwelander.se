@@ -1,9 +1,13 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  i18n: {
-    locales: ['en', 'sv'],
-    defaultLocale: 'en',
-    localeDetection: true,
+  compiler: {
+    styledComponents: true,
   },
-}
+};
+
+module.exports = withNextIntl(nextConfig);

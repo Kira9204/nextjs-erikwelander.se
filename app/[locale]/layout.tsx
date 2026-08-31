@@ -1,0 +1,73 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { headers } from 'next/headers';
+import { useUserAgent as parseUserAgent } from 'next-useragent';
+import StyledComponentsRegistry from '../../lib/styled-components-registry';
+import PageChrome from '../../components/globals/page-chrome';
+import { routing } from '../../i18n/routing';
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'common' });
+  const domain = 'https://erikwelander.se';
+  const previewImage = `${domain}/img/jpg/page-preview-2.jpg`;
+
+  return {
+    title: t('PAGE_TITLE'),
+    description: t('PAGE_DESCRIPTION'),
+    authors: [{ name: 'Erik Welander', url: 'mailto:erik.welander@hotmail.com' }],
+    keywords:
+      'erik welander, fullstack engineer, fullstack developer, full stack engineer, full stack developer, personal home page, personal web page, cv, cv page, cv-page',
+    alternates: {
+      canonical: domain,
+    },
+    icons: {
+      icon: '/img/jpg/erik-welander-2-icon.jpg',
+    },
+    openGraph: {
+      title: t('PAGE_TITLE'),
+      description: t('PAGE_DESCRIPTION'),
+      url: domain,
+      images: [previewImage],
+    },
+  };
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  // Enable static rendering for this request's locale
+  setRequestLocale(locale);
+
+  // Detect device type server-side (used to skip the heavy particle animation on mobile)
+  const hdrs = await headers();
+  const ua = parseUserAgent(hdrs.get('user-agent') ?? '');
+
+  return (
+    <html lang={locale}>
+      <body>
+        <StyledComponentsRegistry>
+          <NextIntlClientProvider>
+            <PageChrome isDesktop={ua.isDesktop}>{children}</PageChrome>
+          </NextIntlClientProvider>
+        </StyledComponentsRegistry>
+      </body>
+    </html>
+  );
+}

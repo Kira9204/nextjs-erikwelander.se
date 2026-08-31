@@ -1,9 +1,10 @@
+'use client';
+
 import React, { ReactNode } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import { COLOR_PAGE_BACKGROUND, COLOR_TEXT } from './constants';
 
-import PageHead from './page-head';
 import PageParticles from './page-particles';
 import PageToolbar from './page-toolbar';
 import PageMain from './page-main';
@@ -16,12 +17,12 @@ body,
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: ${COLOR_PAGE_BACKGROUND};
-    
+
     margin: 0 !important;
     padding: 0 !important;
     height: 100% !important;
     width: 100% !important;
-    
+
     font-size: 16px;
     color: ${COLOR_TEXT};
 }
@@ -34,13 +35,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
-/*
-#__next {
-  width: 100%;
-  height: 100%;
-}
-*/
 
 h1,
 h2,
@@ -59,12 +53,11 @@ const CopyrightNotice = styled.p`
   margin-right: 30px;
 `;
 
-const Layout = ({ children, uaString }: { children: ReactNode; uaString: string }): JSX.Element => {
+const PageChrome = ({ children, isDesktop }: { children: ReactNode; isDesktop: boolean }): React.JSX.Element => {
   return (
     <>
-      <PageHead />
       <GlobalStyle />
-      <PageParticles uaString={uaString} />
+      <PageParticles isDesktop={isDesktop} />
       <PageToolbar />
       <PageMain>
         {children}
@@ -74,4 +67,4 @@ const Layout = ({ children, uaString }: { children: ReactNode; uaString: string 
   );
 };
 
-export default Layout;
+export default PageChrome;

@@ -1,4 +1,5 @@
 import React, { ReactNode, Fragment } from 'react';
+import type { StaticImageData } from 'next/image';
 import {
   ProfileArrowContactStyle,
   ProfileArrowContactImageStyle,
@@ -15,15 +16,16 @@ import {
 
 export interface IContactItem {
   href: string;
-  img: string;
-  children: any;
+  img: StaticImageData;
+  alt: string;
+  children: ReactNode;
 }
 
-export const ContactItem = ({ href, img, children }: IContactItem) => {
+export const ContactItem = ({ href, img, alt, children }: IContactItem) => {
   return (
     <ProfileArrowContactStyle>
       <a href={href} target={'_blank'} rel={'noreferrer'}>
-        <ProfileArrowContactImageStyle src={img} alt={img} />
+        <ProfileArrowContactImageStyle src={img} alt={alt} width={48} height={48} />
         <ProfileArrowContactTextStyle>{children}</ProfileArrowContactTextStyle>
       </a>
     </ProfileArrowContactStyle>

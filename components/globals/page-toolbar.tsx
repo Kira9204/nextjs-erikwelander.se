@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 import styled from 'styled-components';
-import Link from 'next/link';
+import { Link, usePathname } from '../../i18n/navigation';
 import {
   COLOR_BLACK_BACKGROUND,
   COLOR_TOOLBAR_ACTIVE,
@@ -15,7 +17,6 @@ import {
   SIZE_PHONE_LANDSCAPE,
   SIZE_PHONE_PORTRAIT,
 } from './constants';
-import getLang from '../../locales/lang';
 
 const PageTabsContainerStyle = styled.div`
   margin-top: 0;
@@ -64,11 +65,11 @@ const PageTabStyle = styled.div`
   text-align: center;
 `;
 
-const PageTabCurrentStyle = styled.div<{ isCurrent: boolean }>`
+const PageTabCurrentStyle = styled.div<{ $isCurrent: boolean }>`
   margin-top: 5px;
   width: 100%;
   height: 4px;
-  background-color: ${(props) => (props.isCurrent ? COLOR_TOOLBAR_ACTIVE : COLOR_TOOLBAR_INACTIVE)};
+  background-color: ${(props) => (props.$isCurrent ? COLOR_TOOLBAR_ACTIVE : COLOR_TOOLBAR_INACTIVE)};
   border-radius: 20px;
 `;
 
@@ -78,30 +79,27 @@ interface iPageTabsProps {
 }
 
 const Page = ({ pageKey, children }: iPageTabsProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
-    <Link href={`/${router.locale}${pageKey}`} locale={false}>
-      <a>
-        <PageTabStyle>
-          {children}
-          <PageTabCurrentStyle isCurrent={router.pathname === pageKey} />
-        </PageTabStyle>
-      </a>
+    <Link href={pageKey}>
+      <PageTabStyle>
+        {children}
+        <PageTabCurrentStyle $isCurrent={pathname === pageKey} />
+      </PageTabStyle>
     </Link>
   );
 };
 
 const PageToolbar = () => {
-  const router = useRouter();
-  const t = getLang(router);
+  const t = useTranslations('common');
 
   return (
     <PageTabsContainerStyle>
       <PageTabsStyle>
-        <Page pageKey={'/'}>{t.TOOLBAR_HOME}</Page>
-        <Page pageKey={'/resume'}>{t.TOOLBAR_RESUME}</Page>
-        <Page pageKey={'/projects'}>{t.TOOLBAR_PROJECTS}</Page>
+        <Page pageKey={'/'}>{t('TOOLBAR_HOME')}</Page>
+        <Page pageKey={'/resume'}>{t('TOOLBAR_RESUME')}</Page>
+        <Page pageKey={'/projects'}>{t('TOOLBAR_PROJECTS')}</Page>
       </PageTabsStyle>
     </PageTabsContainerStyle>
   );

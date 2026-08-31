@@ -1,5 +1,9 @@
+'use client';
+
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+import profilePicture from '../../assets/img/jpg/erik-welander-2.jpg';
 import {
   COLOR_GRAY_BORDER,
   SIZE_PAD_IPAD_LANDSCAPE,
@@ -22,34 +26,42 @@ export const ProfileContainerStyle = styled.div`
 `;
 
 const PROFILE_PICTURE_SIZE = 300;
-export const ProfilePictureStyle = styled.div`
+const ProfilePictureWrapperStyle = styled.div`
+  position: relative;
+  overflow: hidden;
   border-radius: 50%;
   border: 2px solid ${COLOR_GRAY_BORDER};
   padding: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-clip: content-box;
-  background-image: url(../img/jpg/erik-welander-2.jpg);
   margin: 0 auto;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: ${PROFILE_PICTURE_SIZE - 100}px;
     height: ${PROFILE_PICTURE_SIZE - 100}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 100}px ${PROFILE_PICTURE_SIZE - 100}px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     width: ${PROFILE_PICTURE_SIZE - 50}px;
     height: ${PROFILE_PICTURE_SIZE - 50}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 50}px ${PROFILE_PICTURE_SIZE - 50}px;
   }
 
   @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
     width: ${PROFILE_PICTURE_SIZE - 20}px;
     height: ${PROFILE_PICTURE_SIZE - 20}px;
-    background-size: ${PROFILE_PICTURE_SIZE - 20}px ${PROFILE_PICTURE_SIZE - 20}px;
   }
 `;
+
+export const ProfilePictureStyle = () => (
+  <ProfilePictureWrapperStyle>
+    <Image
+      src={profilePicture}
+      alt="Erik Welander"
+      fill
+      style={{ objectFit: 'cover', borderRadius: '50%' }}
+      sizes="(min-width: 1400px) 280px, (min-width: 768px) 250px, 200px"
+      priority
+    />
+  </ProfilePictureWrapperStyle>
+);
 
 const FONT_WEIGHT = 400;
 export const ProfilePictureNameStyle = styled.h1`
@@ -107,7 +119,7 @@ export const ContactItemsStyle = styled.div`
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px),
     (min-width: ${SIZE_PHONE_LANDSCAPE}px),
-    (min-width: ${SIZE_PHONE_IPHONE_PORTRAIT}px and min-height: ${SIZE_PHONE_IPHONE_LANDSCAPE}px) {
+    (min-width: ${SIZE_PHONE_IPHONE_PORTRAIT}px) and (min-height: ${SIZE_PHONE_IPHONE_LANDSCAPE}px) {
     width: 100%;
     grid-template-columns: 50% 50%;
   }
@@ -135,9 +147,10 @@ export const ContactItemStyle = styled.div`
 `;
 
 const IMAGE_SIZE = 64;
-export const ContactItemImageStyle = styled.img`
+export const ContactItemImageStyle = styled(Image)`
   display: block;
   margin: 0 auto;
+  height: auto;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     width: ${IMAGE_SIZE - 14}px;
@@ -158,7 +171,7 @@ export const ContactItemTextStyle = styled.div`
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px),
     (min-width: ${SIZE_PHONE_LANDSCAPE}px),
-    (min-width: ${SIZE_PHONE_IPHONE_PORTRAIT}px and min-height: ${SIZE_PHONE_IPHONE_LANDSCAPE}px) {
+    (min-width: ${SIZE_PHONE_IPHONE_PORTRAIT}px) and (min-height: ${SIZE_PHONE_IPHONE_LANDSCAPE}px) {
     height: ${IMAGE_SIZE - 14}px;
     font-size: 16px;
   }

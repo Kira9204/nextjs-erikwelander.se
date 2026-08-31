@@ -1,7 +1,12 @@
+'use client';
+
 import React from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Image, { type StaticImageData } from 'next/image';
+import { Link, usePathname } from '../../i18n/navigation';
+import americanFlag from '../../assets/img/png/american-flag.png';
+import swedishFlag from '../../assets/img/png/swedish-flag.png';
+import type { AppLocale } from '../../i18n/routing';
 
 const LanguagesContainerStyle = styled.div`
   display: flex;
@@ -9,20 +14,18 @@ const LanguagesContainerStyle = styled.div`
   margin-top: 20px;
   margin-right: 10px;
 `;
-const LanguageStyle = styled.img`
+const LanguageImageStyle = styled(Image)`
   display: block;
   width: 40px;
   height: 40px;
   margin-right: 10px;
 `;
 
-const Language = ({ imgSrc, lang }: { imgSrc: string; lang: string }) => {
-  const router = useRouter();
+const Language = ({ img, locale, label }: { img: StaticImageData; locale: AppLocale; label: string }) => {
+  const pathname = usePathname();
   return (
-    <Link href={`/${lang}${router.asPath}`} locale={false}>
-      <a style={{ textDecoration: 'underline' }}>
-        <LanguageStyle src={imgSrc} alt={imgSrc} />
-      </a>
+    <Link href={pathname} locale={locale} style={{ textDecoration: 'underline' }}>
+      <LanguageImageStyle src={img} alt={label} width={40} height={40} />
     </Link>
   );
 };
@@ -30,8 +33,8 @@ const Language = ({ imgSrc, lang }: { imgSrc: string; lang: string }) => {
 const PageLanguage = () => {
   return (
     <LanguagesContainerStyle>
-      <Language imgSrc={'/img/png/american-flag.png'} lang={'en'} />
-      <Language imgSrc={'/img/png/swedish-flag.png'} lang={'sv'} />
+      <Language img={americanFlag} locale={'en'} label={'English'} />
+      <Language img={swedishFlag} locale={'sv'} label={'Svenska'} />
     </LanguagesContainerStyle>
   );
 };

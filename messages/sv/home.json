@@ -1,0 +1,15 @@
+{
+  "HI": "Hej!",
+  "PROFESSIONAL": "professionell",
+  "INDEX_INTRODUCTION_1": "Jag heter Erik Welander, bor i stockholm och är en 30-årig systemutvecklare med ett stort intresse för teknik, Människa-dator interactioner (AI)\n          samt en uppsjö utav olika programmerings-tekniker, ramverk, språk och projekt.\n          Sitter jag i timmar framför terminaler för att konfigurera Linux system som Arch? Japp!\n          Gillar jag att konfigurera infra-struktur, nätverk och hårdvara? Japp!\n          \n          Jag spenderar majoriteten av min utveckartid dessa dagar i Typescript/Javascript och Java/Kotlin med Spring/Micronaut.\n          Jag utvecklar både front-end (gränssnitt för hemsidor som denna) samt back-end (komplex affärslogik, databaser etc),\n          Den här sidan är t.ex en helt server-renderad React sida med \"styled-components\" (javascript genererad css),\n          kompilerad till statiska sidor med Next.js på Nginx (Såklart!)",
+  "INDEX_INTRODUCTION_2": "Saker jag tycker om att spendera tid på är:",
+  "INDEX_INTRODUCTION_LIST_ITEM_1": "Anime, oftast med ett fokus på fantasi och övernaturliga fenonem / magi blandat med romans",
+  "INDEX_INTRODUCTION_LIST_ITEM_2": "Narrativt drivna spel med intressanta världar mixat med skräck. Life is Strange, Dreamfall: The Longest Journey, Detroit: Become Human, Mass Effect, Beyond two souls, To the moon, Dead Space, SOMA etc",
+  "INDEX_INTRODUCTION_LIST_ITEM_3": "Digital konst, mestadels inom 3D",
+  "INDEX_INTRODUCTION_LIST_ITEM_4": "Mechs (MechWarrior, Battletech, inkluderar det gränssnitt mellan robotar?)",
+  "INDEX_INTRODUCTION_LIST_ITEM_5": "Djur, hundar ♥ i synnerhet",
+  "INDEX_INTRODUCTION_LIST_ITEM_6": "Umgås genom långa promenader eller meet-ups",
+  "INDEX_INTRODUCTION_CONTACT_ME_1": "Du är välkommen att kontakta mig på någon utan plattformarna ovan, men skriv ett ämne för förtydligande",
+  "INDEX_INTRODUCTION_CONTACT_ME_2_1": "Om du letar efter en",
+  "INDEX_INTRODUCTION_CONTACT_ME_2_2": "överblick, ta en titt på resumé sidan."
+}
