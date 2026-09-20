@@ -3,11 +3,8 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { headers } from 'next/headers';
-import { useUserAgent as parseUserAgent } from 'next-useragent';
-import StyledComponentsRegistry from '../../lib/styled-components-registry';
-import PageChrome from '../../components/globals/page-chrome';
 import { routing } from '../../i18n/routing';
+import PageLocaleChrome from '../../components/globals/page-locale-chrome';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -52,20 +49,9 @@ export default async function LocaleLayout({
     notFound();
   }
 
-
-  // Detect device type server-side (used to skip the heavy particle animation on mobile)
-  const hdrs = await headers();
-  const ua = parseUserAgent(hdrs.get('user-agent') ?? '');
-
   return (
-    <html lang={locale}>
-      <body>
-        <StyledComponentsRegistry>
-          <NextIntlClientProvider>
-            <PageChrome isDesktop={ua.isDesktop}>{children}</PageChrome>
-          </NextIntlClientProvider>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
+    <NextIntlClientProvider>
+      <PageLocaleChrome>{children}</PageLocaleChrome>
+    </NextIntlClientProvider>
   );
 }

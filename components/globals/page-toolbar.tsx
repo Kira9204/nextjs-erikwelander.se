@@ -99,6 +99,7 @@ const PageToolbar = () => {
       <PageTabsStyle>
         <Page pageKey={'/'}>{t('TOOLBAR_HOME')}</Page>
         <Page pageKey={'/resume'}>{t('TOOLBAR_RESUME')}</Page>
+        <Page pageKey={'/letter'}>{t('TOOLBAR_LETTER')}</Page>
         <Page pageKey={'/projects'}>{t('TOOLBAR_PROJECTS')}</Page>
       </PageTabsStyle>
     </PageTabsContainerStyle>

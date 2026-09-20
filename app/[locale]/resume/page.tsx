@@ -25,7 +25,13 @@ import {
   InitialContentSpacingStyle,
 } from '../../../components/resume/styles';
 import { ContactItem, CVRow } from '../../../components/resume/components';
-import { LinkUnderlined, LinkUnderlineItalic } from '../../../components/globals/styles';
+import {
+  LinkUnderlined,
+  LinkUnderlineItalic,
+  SkillsListContainer,
+  UnstyledCommaList,
+} from '../../../components/globals/styles';
+import { RICH_TEXT_TAGS } from '../../../components/globals/rich-text';
 import phoneIcon from '../../../assets/img/png/phone.png';
 import outlookIcon from '../../../assets/img/png/outlook.png';
 import linkedinIcon from '../../../assets/img/png/linkedin.png';
@@ -56,6 +62,33 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 {t('OCCUPATION_SUBTITLE')}
               </ProfileArrowOccupationStyle>
               <ProfileQuoteStyle>{t('PERSONAL_QUOTE')}</ProfileQuoteStyle>
+              <SkillsListContainer>
+                {t('LANGUAGES')}:
+                <UnstyledCommaList>
+                  <li>Javascript</li>
+                  <li>Typescript</li>
+                  <li>Java</li>
+                  <li>Kotlin</li>
+                  <li>React</li>
+                  <li>NextJS</li>
+                  <li>Angular</li>
+                  <li>Express</li>
+                  <li>Spring Boot</li>
+                  <li>{t('AND_MANY_MORE')}</li>
+                </UnstyledCommaList>
+              </SkillsListContainer>
+              <SkillsListContainer>
+                {t('SYSTEMS')}:
+                <UnstyledCommaList>
+                  <li>Fedora</li>
+                  <li>Red Hat</li>
+                  <li>Debian</li>
+                  <li>Ubuntu</li>
+                  <li>Arch</li>
+                  <li>Docker</li>
+                  <li>Podman</li>
+                </UnstyledCommaList>
+              </SkillsListContainer>
             </ProfileArrowGridContainerLeftStyle>
             <div>
               <ContactItem href={'tel:+46737471410'} img={phoneIcon} alt={'Phone'}>
@@ -79,7 +112,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
         <CVSectionDownloadContainerStyle>
           <a href={`/pdf/erik-welander-cv-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
             <CVSectionDownloadImageStyle src={downloadIcon} alt={'Download'} width={40} height={40} />
-            <CVSectionDownloadTextStyle>{tr('DOWNLOAD_PDF')}</CVSectionDownloadTextStyle>
+            <CVSectionDownloadTextStyle>{t('DOWNLOAD_PDF')}</CVSectionDownloadTextStyle>
           </a>
         </CVSectionDownloadContainerStyle>
         <CVSectionContainerStyle>
@@ -93,7 +126,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
           <CVSectionTableStyle>
             <tbody>
               <CVRow
-                period={'2022-06 -> '}
+                period={'2022-06 -> 2027-03'}
                 title={tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_TITLE')}
                 companies={[
                   {
@@ -101,10 +134,10 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     link: `https://www.volvocars.com/${l === 'en' ? 'intl' : 'se'}`,
                   },
                 ]}
-                tags={['Javascript', 'Typescript', 'React', 'Java', 'Spring']}
+                tags={['Javascript', 'Typescript', 'React', 'Angular', 'Java', 'Spring', 'Docker']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_1_TEXT')}
-                <LinkUnderlined
+                {tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_1_TEXT')}{' '}
+                <LinkUnderlineItalic
                   href={
                     l === 'en'
                       ? 'https://www.volvocars.com/intl/v/buy/fleet-cars'
@@ -114,8 +147,8 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                   rel="noreferrer"
                 >
                   Fleet Cars/Care by Volvo
-                </LinkUnderlined>
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_2_TEXT')}
+                </LinkUnderlineItalic>{' '}
+                {tr.rich('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_2_TEXT', RICH_TEXT_TAGS)}
               </CVRow>
               <CVRow
                 period={'2022-02 -> 2022-06'}
@@ -291,7 +324,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
         <CVSectionContainerTopMarginStyle />
         <CVSectionContainerStyle>
           <CVSectionBubbleStyle>
-            <CVSectionBubbleImageStyle src={universityIcon} alt={'University'} width={48} height={48} />
+            <CVSectionBubbleImageStyle src={universityIcon} alt={'University'} />
             <CVSectionBubbleTextStyle>{tr('RESUME_SECTION_EDUCATION')}</CVSectionBubbleTextStyle>
           </CVSectionBubbleStyle>
           <CVSectionBubbleFillLineStyle />

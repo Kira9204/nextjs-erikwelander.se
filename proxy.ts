@@ -4,6 +4,6 @@ import { routing } from './i18n/routing';
 export default createMiddleware(routing);
 
 export const config = {
-  // Match all paths except for ones starting with api, _next, or containing a dot (static files)
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  // Match all pathnames except for the ones starting with the listed segments
+  matcher: ['/((?!api|trpc|_next|_vercel|.*\\..*).*)'],
 };

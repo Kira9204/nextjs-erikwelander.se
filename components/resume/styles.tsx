@@ -79,7 +79,7 @@ export const ProfileArrowStyle = styled.div`
     border-left: 0px solid transparent;
     border-right: 100px solid ${COLOR_GRAY_BORDER};
     border-top: 120px solid transparent;
-    border-bottom: 120px solid transparent;
+    border-bottom: 175px solid transparent;
   }
 `;
 
@@ -128,7 +128,7 @@ export const ProfileArrowGridContainerLeftStyle = styled.div`
     height: ${PROFILE_PICTURE_SIZE}px;
     margin-left: 50px;
     margin-top: 30px;
-    margin-top: ${PROFILE_PICTURE_SIZE / 4 - 10}px;
+    margin-top: ${PROFILE_PICTURE_SIZE / 4 - 40}px;
   }
 `;
 
@@ -188,7 +188,7 @@ export const ProfileArrowContactStyle = styled.div`
     padding-bottom: 15px;
 
     &:first-of-type {
-      padding-top: 14px;
+      padding-top: 22.5px;
     }
   }
 `;
@@ -234,6 +234,9 @@ export const ProfileArrowContactTextStyle = styled.span`
 export const CVContainerStyle = styled.div`
   font-size: 24px;
   font-weight: 400;
+
+  /* Preserve newlines from translation strings */
+  white-space: pre-line;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     margin-top: 50px;

@@ -1,13 +1,11 @@
 'use client';
 
 import React, { ReactNode } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import { COLOR_PAGE_BACKGROUND, COLOR_TEXT } from './constants';
 
 import PageParticles from './page-particles';
-import PageToolbar from './page-toolbar';
-import PageMain from './page-main';
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -47,22 +45,15 @@ h6 {
 }
 `;
 
-const CopyrightNotice = styled.p`
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 30px;
-`;
-
+// Renders the locale-independent app shell (global reset styles and the particle background
+// animation). This must stay outside of app/[locale] so it keeps its mounted state (and the
+// animation keeps running) when the user switches locale, instead of remounting.
 const PageChrome = ({ children, isDesktop }: { children: ReactNode; isDesktop: boolean }): React.JSX.Element => {
   return (
     <>
       <GlobalStyle />
       <PageParticles isDesktop={isDesktop} />
-      <PageToolbar />
-      <PageMain>
-        {children}
-        <CopyrightNotice>&copy; Erik Welander</CopyrightNotice>
-      </PageMain>
+      {children}
     </>
   );
 };

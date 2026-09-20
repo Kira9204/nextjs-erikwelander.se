@@ -1,11 +1,17 @@
 {
+  "HI": "Hi",
   "PAGE_TITLE": "Erik Welander - Personal web page",
   "PAGE_DESCRIPTION": "Personal web page of Erik Welander",
-  "PHONE_NUMBER": "+46-73-747-1410",
+  "PHONE_NUMBER": "+4673-747-1410",
   "OCCUPATION_TITLE": "Full Stack Systems Engineer.",
   "OCCUPATION_SUBTITLE": "Frontend, backend, and every unix system in-between",
+  "LANGUAGES": "Languages",
+  "AND_MANY_MORE": "and many more",
+  "SYSTEMS": "Systems",
   "PERSONAL_QUOTE": "Code that does one thing, and one thing well, is art.",
   "TOOLBAR_HOME": "Home",
   "TOOLBAR_RESUME": "Resumé",
-  "TOOLBAR_PROJECTS": "Projects"
+  "TOOLBAR_LETTER": "Letter",
+  "TOOLBAR_PROJECTS": "Projects",
+  "DOWNLOAD_PDF": "Download PDF"
 }

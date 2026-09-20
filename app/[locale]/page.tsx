@@ -21,6 +21,7 @@ import githubIcon from '../../assets/img/png/github.png';
 import linkedinIcon from '../../assets/img/png/linkedin.png';
 import outlookIcon from '../../assets/img/png/outlook.png';
 import twitterIcon from '../../assets/img/png/twitter.png';
+import { SkillsListContainer, UnstyledCommaList } from '../../components/globals/styles';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -43,13 +44,41 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           {t('OCCUPATION_SUBTITLE')}
         </ProfilePictureOccupationStyle>
         <ProfilePictureQuoteStyle>{t('PERSONAL_QUOTE')}</ProfilePictureQuoteStyle>
+        <div style={{ height: '10px' }} />
+        <SkillsListContainer>
+          {t('LANGUAGES')}:
+          <UnstyledCommaList>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>Java</li>
+            <li>Kotlin</li>
+            <li>React</li>
+            <li>NextJS</li>
+            <li>Angular</li>
+            <li>Express</li>
+            <li>Spring Boot</li>
+            <li>{t('AND_MANY_MORE')}</li>
+          </UnstyledCommaList>
+        </SkillsListContainer>
+        <SkillsListContainer>
+          {t('SYSTEMS')}:
+          <UnstyledCommaList>
+            <li>Fedora</li>
+            <li>Red Hat</li>
+            <li>Debian</li>
+            <li>Ubuntu</li>
+            <li>Arch</li>
+            <li>Docker</li>
+            <li>Podman</li>
+          </UnstyledCommaList>
+        </SkillsListContainer>
       </ProfileContainerStyle>
       <ContactItemsSpacingStyle />
       <ContactItemsStyle>
         <ContactItem href={'https://discordapp.com/users/165204009303539712'} img={discordIcon} alt={'Discord'}>
           Discord
           <br />
-          kira#0005
+          kira9204
         </ContactItem>
         <ContactItem href={'tel:+46737471410'} img={phoneIcon} alt={'Phone'}>
           {t('PHONE_NUMBER')}

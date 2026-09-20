@@ -1,11 +1,17 @@
 {
+  "HI": "Hej",
   "PAGE_TITLE": "Erik Welander - Personlig hemsida",
   "PAGE_DESCRIPTION": "Personlig hemsida av Erik Welander",
   "PHONE_NUMBER": "073-747-1410",
   "OCCUPATION_TITLE": "Full stack Systemutvecklare",
   "OCCUPATION_SUBTITLE": "Frontend, backend, och alla unix system däremellan",
+  "LANGUAGES": "Språk",
+  "AND_MANY_MORE": "Och många fler",
+  "SYSTEMS": "System",
   "PERSONAL_QUOTE": "Kod som gör en sak, och en sak väl är konst.",
   "TOOLBAR_HOME": "Hem",
   "TOOLBAR_RESUME": "Resumé",
-  "TOOLBAR_PROJECTS": "Projekt"
+  "TOOLBAR_LETTER": "Brev",
+  "TOOLBAR_PROJECTS": "Projekt",
+  "DOWNLOAD_PDF": "Ladda ner PDF"
 }

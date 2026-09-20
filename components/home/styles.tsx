@@ -63,7 +63,7 @@ export const ProfilePictureStyle = () => (
   </ProfilePictureWrapperStyle>
 );
 
-const FONT_WEIGHT = 400;
+export const FONT_WEIGHT = 400;
 export const ProfilePictureNameStyle = styled.h1`
   margin-top: 20px;
   text-transform: uppercase;
