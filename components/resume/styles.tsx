@@ -193,7 +193,7 @@ export const ProfileArrowContactStyle = styled.div`
   }
 `;
 
-const IMAGE_SIZE = 48;
+const IMAGE_SIZE = 38;
 export const ProfileArrowContactImageStyle = styled(Image)`
   width: ${IMAGE_SIZE}px;
   height: auto;
@@ -232,49 +232,22 @@ export const ProfileArrowContactTextStyle = styled.span`
 `;
 
 export const CVContainerStyle = styled.div`
-  font-size: 24px;
   font-weight: 400;
 
-  /* Preserve newlines from translation strings */
-  white-space: pre-line;
-
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    margin-top: 50px;
+    font-size: 16px;
   }
 
-  @media (min-width: ${SIZE_PHONE_LANDSCAPE}px) {
-    margin-top: 80px;
+  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
+    font-size: 18px;
   }
 
-  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
-    margin: 150px;
-    margin-left: ${PAGE_MARGIN}px;
-    margin-right: ${PAGE_MARGIN}px;
-    margin-bottom: ${PAGE_MARGIN}px;
-  }
+  /* Preserve newlines */
+  white-space: pre-line;
 `;
 
 export const CVSectionContainerTopMarginStyle = styled.div`
   margin-top: 60px;
-`;
-
-const PC_CV_WIDTH = 95;
-export const CVSectionDownloadContainerStyle = styled.div`
-  width: 100%;
-  display: flex;
-
-  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    position: relative;
-    left: 18px;
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
-    width: ${PC_CV_WIDTH}%;
-    margin: 0 auto;
-    margin-top: 150px;
-    margin-bottom: ${PAGE_MARGIN}px;
-  }
 `;
 
 export const CVSectionDownloadImageStyle = styled(Image)`
@@ -316,15 +289,16 @@ export const CVSectionDownloadTextStyle = styled.span`
 export const CVSectionContainerStyle = styled.div`
   display: flex;
   width: 100%;
-
-  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
-    width: ${PC_CV_WIDTH}%;
-    margin: 0 auto;
-  }
 `;
 
 export const CVSectionBubbleStyle = styled.div`
   background: ${COLOR_GRAY_BORDER};
+  border-radius: 20px;
+  padding: 4px 20px;
+  width: fit-content;
+`;
+
+export const CVSectionBubbleTransparentStyle = styled.div`
   border-radius: 20px;
   padding: 4px 20px;
   width: fit-content;
@@ -372,7 +346,7 @@ export const CVSectionBubbleFillLineStyle = styled.div`
 `;
 
 export const CVSectionTableContainerStyle = styled.div`
-  width: 93%;
+  width: 95%;
   margin: 0 auto;
 `;
 
@@ -465,6 +439,7 @@ export const CVSectionPositionText = styled.div`
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     font-size: 18px;
+    width: 85%;
   }
 
   /* Preserve newlines */

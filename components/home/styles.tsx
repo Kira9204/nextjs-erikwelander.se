@@ -211,6 +211,7 @@ export const IntroductionStyle = styled.div`
 
 export const IntroductionFirstWordStyle = styled.h4`
   font-weight: normal;
+  margin-bottom: 16px;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     font-size: 20px;

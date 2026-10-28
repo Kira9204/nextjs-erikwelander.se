@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { DownloadPDFImage, DownloadPDFText, LetterHeader, LetterText } from '../../../components/letter/styles';
+import { DownloadPDFImage, DownloadPDFText, LetterContainer, LetterHeader } from '../../../components/letter/styles';
 import {
   ProfileArrowContentStyle,
   ProfileArrowStyle,
@@ -9,37 +9,17 @@ import {
   ProfileArrowGridContainerLeftStyle,
   ProfileArrowGridNameStyle,
   ProfileArrowOccupationStyle,
-  CVContainerStyle,
-  CVSectionContainerStyle,
-  CVSectionBubbleStyle,
-  CVSectionBubbleImageStyle,
-  CVSectionBubbleTextStyle,
-  CVSectionBubbleFillLineStyle,
-  CVSectionTableStyle,
-  CVSectionTableContainerStyle,
   ProfileQuoteStyle,
-  CVSectionContainerTopMarginStyle,
-  CVSectionDownloadContainerStyle,
-  CVSectionDownloadImageStyle,
-  CVSectionDownloadTextStyle,
   InitialContentSpacingStyle,
 } from '../../../components/resume/styles';
-import { ContactItem, CVRow } from '../../../components/resume/components';
-import {
-  LinkUnderlined,
-  LinkUnderlineItalic,
-  SkillsListContainer,
-  UnstyledCommaList,
-} from '../../../components/globals/styles';
-import { RICH_TEXT_TAGS } from '../../../components/globals/rich-text';
+import { ContactItem } from '../../../components/resume/components';
+import { SkillsListContainer, UnstyledCommaList } from '../../../components/globals/styles';
+import { MarkdownText } from '../../../components/globals/markdown-text';
 import phoneIcon from '../../../assets/img/png/phone.png';
 import outlookIcon from '../../../assets/img/png/outlook.png';
 import linkedinIcon from '../../../assets/img/png/linkedin.png';
 import githubIcon from '../../../assets/img/png/github.png';
 import downloadIcon from '../../../assets/img/svg/download.svg';
-import portfolioIcon from '../../../assets/img/svg/portfolio.svg';
-import universityIcon from '../../../assets/img/svg/university.svg';
-import groupIcon from '../../../assets/img/svg/group.svg';
 
 export default async function Letter({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: l } = await params;
@@ -107,23 +87,18 @@ export default async function Letter({ params }: { params: Promise<{ locale: str
           </ProfileArrowGridStyle>
         </ProfileArrowContentStyle>
       </ProfileContainerStyle>
-      <br />
-      <br />
-      <a href={`/pdf/erik-welander-letter-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
-        <DownloadPDFImage src={downloadIcon} alt={'Download'} />
-        <DownloadPDFText>{t('DOWNLOAD_PDF')}</DownloadPDFText>
-      </a>
-      <br />
-      <br />
-      <LetterHeader>{t('HI')}!</LetterHeader>
-      <LetterText>{tr('LETTER_TEXT_1')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_2')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_3')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_4')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_5')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_6')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_7')}</LetterText>
-      <LetterText>{tr('LETTER_TEXT_8')}</LetterText>
+      <LetterContainer>
+        <br />
+        <br />
+        <a href={`/pdf/erik-welander-letter-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
+          <DownloadPDFImage src={downloadIcon} alt={'Download'} />
+          <DownloadPDFText>{t('DOWNLOAD_PDF')}</DownloadPDFText>
+        </a>
+        <br />
+        <br />
+        <LetterHeader>{t('HI')}!</LetterHeader>
+        <MarkdownText>{tr.raw('LETTER_TEXT')}</MarkdownText>
+      </LetterContainer>
     </>
   );
 }

@@ -34,8 +34,9 @@ export const ProjectTextContainer = styled.div`
   margin-right: 40px;
   font-size: 16px;
 
-  /* Preserve newlines */
-  white-space: pre-line;
+  li {
+    margin-bottom: 10px;
+  }
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     margin-top: 10px;
@@ -58,10 +59,6 @@ export const ProjectTextHeader = styled.strong`
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     font-size: 18px;
   }
-`;
-
-export const ProjectListItem = styled.li`
-  margin-bottom: 10px;
 `;
 
 export const ImgObs = styled(Image).attrs({ src: obsScreenshot, alt: 'OBS Studio screenshot' })`

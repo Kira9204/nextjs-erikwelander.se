@@ -19,19 +19,14 @@ import {
   CVSectionTableContainerStyle,
   ProfileQuoteStyle,
   CVSectionContainerTopMarginStyle,
-  CVSectionDownloadContainerStyle,
   CVSectionDownloadImageStyle,
   CVSectionDownloadTextStyle,
   InitialContentSpacingStyle,
+  CVSectionBubbleTransparentStyle,
 } from '../../../components/resume/styles';
 import { ContactItem, CVRow } from '../../../components/resume/components';
-import {
-  LinkUnderlined,
-  LinkUnderlineItalic,
-  SkillsListContainer,
-  UnstyledCommaList,
-} from '../../../components/globals/styles';
-import { RICH_TEXT_TAGS } from '../../../components/globals/rich-text';
+import { SkillsListContainer, UnstyledCommaList } from '../../../components/globals/styles';
+import { MarkdownText } from '../../../components/globals/markdown-text';
 import phoneIcon from '../../../assets/img/png/phone.png';
 import outlookIcon from '../../../assets/img/png/outlook.png';
 import linkedinIcon from '../../../assets/img/png/linkedin.png';
@@ -107,17 +102,20 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
           </ProfileArrowGridStyle>
         </ProfileArrowContentStyle>
       </ProfileContainerStyle>
-
       <CVContainerStyle>
-        <CVSectionDownloadContainerStyle>
+        <br />
+        <br />
+        <CVSectionBubbleTransparentStyle>
           <a href={`/pdf/erik-welander-cv-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
-            <CVSectionDownloadImageStyle src={downloadIcon} alt={'Download'} width={40} height={40} />
+            <CVSectionDownloadImageStyle src={downloadIcon} alt={'Download'} />
             <CVSectionDownloadTextStyle>{t('DOWNLOAD_PDF')}</CVSectionDownloadTextStyle>
           </a>
-        </CVSectionDownloadContainerStyle>
+        </CVSectionBubbleTransparentStyle>
+        <br />
+        <br />
         <CVSectionContainerStyle>
           <CVSectionBubbleStyle>
-            <CVSectionBubbleImageStyle src={portfolioIcon} alt={'Portfolio'} width={48} height={48} />
+            <CVSectionBubbleImageStyle src={portfolioIcon} alt={'Portfolio'} />
             <CVSectionBubbleTextStyle>{tr('RESUME_SECTION_WORK_EXPERIENCE')}</CVSectionBubbleTextStyle>
           </CVSectionBubbleStyle>
           <CVSectionBubbleFillLineStyle />
@@ -136,19 +134,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Javascript', 'Typescript', 'React', 'Angular', 'Java', 'Spring', 'Docker']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_1_TEXT')}{' '}
-                <LinkUnderlineItalic
-                  href={
-                    l === 'en'
-                      ? 'https://www.volvocars.com/intl/v/buy/fleet-cars'
-                      : 'https://www.volvocars.com/se/business/fleet'
-                  }
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  Fleet Cars/Care by Volvo
-                </LinkUnderlineItalic>{' '}
-                {tr.rich('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_2_TEXT', RICH_TEXT_TAGS)}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2022-02 -> 2022-06'}
@@ -161,7 +147,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'Spring', 'Javascript', 'Typescript', 'React']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_LEEROY_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_LEEROY_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2018-01 -> 2022-01'}
@@ -192,23 +178,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                   'React',
                 ]}
               >
-                <>
-                  <LinkUnderlined
-                    href={
-                      'https://marketplace.atlassian.com/plugins/com.riadalabs.jira.plugins.insight/server/overview'
-                    }
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    &quot;Insight Asset Management for Jira&quot;
-                  </LinkUnderlined>
-                  &nbsp;{tr('DEVELOPER_AT')}&nbsp;
-                  <LinkUnderlineItalic href={'https://www.atlassian.com/'} target={'_blank'} rel="noreferrer">
-                    Atlassian.
-                  </LinkUnderlineItalic>
-                  <br />
-                  {tr('RESUME_SECTION_WORK_EXPERIENCE_ATLASSIAN_INSIGHT_TEXT')}
-                </>
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_ATLASSIAN_INSIGHT_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2017-02 -> 2017-12'}
@@ -225,7 +195,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['PHP', 'Laravel', 'MySQL', 'Redis', 'Slim', 'Twig', 'DBAL', 'Code Igniter', 'Javascript']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_SHOPELLO_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_SHOPELLO_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2016-09 -> 2017-01'}
@@ -238,7 +208,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['PHP', 'MySQL', 'Javascript', 'JQuery']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_CLINICBUDDY_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_CLINICBUDDY_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2015-10 -> 2016-05'}
@@ -251,7 +221,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'Android', 'Linux']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_STSOLUTIONS_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_STSOLUTIONS_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2015-08 -> 2015-10'}
@@ -268,7 +238,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TAG')]}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2014-06 -> 2014-12'}
@@ -285,7 +255,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TAG')]}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2013-09 -> 2013-11'}
@@ -302,7 +272,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TAG')]}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2012-12 -> 2013-02'}
@@ -315,7 +285,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['PHP']}
               >
-                {tr('RESUME_SECTION_WORK_EXPERIENCE_KNIVKULTUR_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_WORK_EXPERIENCE_KNIVKULTUR_TEXT')}</MarkdownText>
               </CVRow>
             </tbody>
           </CVSectionTableStyle>
@@ -343,7 +313,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'Spring', 'Android', tr('DATABASES'), tr('WEB_DEVELOPMENT'), tr('TESTING'), 'Scrum']}
               >
-                {tr('RESUME_SECTION_EDUCATION_SYSTEMS_ENGINEER_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_EDUCATION_SYSTEMS_ENGINEER_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2012-09 -> 2014-08'}
@@ -364,7 +334,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                   'Scrum',
                 ]}
               >
-                {tr('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2008-08 -> 2012-06'}
@@ -377,7 +347,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={['Java', 'C#', 'C++', tr('WEB_DEVELOPMENT'), `${tr('NETWORKS')} CISCO CCNA 1-4`]}
               >
-                {tr('RESUME_SECTION_EDUCATION_TECHNOLOGY_PROGRAMMING_NETWORKS_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_EDUCATION_TECHNOLOGY_PROGRAMMING_NETWORKS_TEXT')}</MarkdownText>
               </CVRow>
             </tbody>
           </CVSectionTableStyle>
@@ -395,7 +365,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
           <CVSectionTableStyle>
             <tbody>
               <CVRow
-                period={'2012 ->'}
+                period={'2012 - 2022'}
                 title={tr('RESUME_SECTION_NON_PROFIT_IX_BOARD_MEMBER_TITLE')}
                 companies={[
                   {
@@ -409,7 +379,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('TECHNOLOGY'), 'Linux']}
               >
-                {tr('RESUME_SECTION_NON_PROFIT_IX_BOARD_MEMBER_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_NON_PROFIT_IX_BOARD_MEMBER_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2012 - 2015'}
@@ -422,7 +392,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('ORGANIZATION'), tr('MEETUP')]}
               >
-                {tr('RESUME_SECTION_NON_PROFIT_PROXXI_KEYHOLDER_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_NON_PROFIT_PROXXI_KEYHOLDER_TEXT')}</MarkdownText>
               </CVRow>
               <CVRow
                 period={'2010 - 2015'}
@@ -439,7 +409,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 ]}
                 tags={[tr('NETWORKS'), tr('SERVERS')]}
               >
-                {tr('RESUME_SECTION_NON_PROFIT_JOTI_NETWORK_OPERATOR_TEXT')}
+                <MarkdownText>{tr.raw('RESUME_SECTION_NON_PROFIT_JOTI_NETWORK_OPERATOR_TEXT')}</MarkdownText>
               </CVRow>
             </tbody>
           </CVSectionTableStyle>

@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server';
 import {
   InitialContentSpacingStyle,
   Project,
-  ProjectListItem,
   ProjectContainer,
   ProjectTextContainer,
   ProjectTextHeader,
@@ -11,7 +10,7 @@ import {
   ImgTimberwolf,
   ImgTimberwolfWallPaper,
 } from '../../../components/projects/styles';
-import { LinkUnderlined } from '../../../components/globals/styles';
+import { MarkdownText } from '../../../components/globals/markdown-text';
 
 export default async function Projects({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -27,13 +26,7 @@ export default async function Projects({ params }: { params: Promise<{ locale: s
           </a>
           <ProjectTextContainer>
             <ProjectTextHeader>{t('PROJECT_STREAMING_SETUP_TITLE')}</ProjectTextHeader>
-            <p>{t('PROJECT_STREAMING_SETUP_INTRO_TEXT')}</p>
-            <ul>
-              <ProjectListItem>{t('PROJECT_STREAMING_SETUP_AUDIO_TEXT')}</ProjectListItem>
-              <ProjectListItem>{t('PROJECT_STREAMING_SETUP_SOFTWARE_TEXT')}</ProjectListItem>
-              <ProjectListItem>{t('PROJECT_STREAMING_SETUP_MOCAP_VR_TEXT')}</ProjectListItem>
-            </ul>
-            <p>{t('PROJECT_STREAMING_SETUP_VTUBER_TEXT')}</p>
+            <MarkdownText>{t.raw('PROJECT_STREAMING_SETUP_TEXT')}</MarkdownText>
           </ProjectTextContainer>
         </Project>
       </ProjectContainer>
@@ -47,18 +40,7 @@ export default async function Projects({ params }: { params: Promise<{ locale: s
           </a>
           <ProjectTextContainer>
             <ProjectTextHeader>{t('PROJECT_TIMBERWOLF_PRINT_TITLE')}</ProjectTextHeader>
-            <p>
-              {t('PROJECT_TIMBERWOLF_PRINT_DESCRIPTION_TEXT')}&nbsp;
-              <LinkUnderlined
-                href={'https://www.linkedin.com/in/viktor-welander-9b7298156/'}
-                target={'_blank'}
-                rel={'noreferrer'}
-              >
-                Viktor Welander
-              </LinkUnderlined>
-              &nbsp;
-              {t('PROJECT_TIMBERWOLF_PRINT_CREDIT_TEXT')}
-            </p>
+            <MarkdownText>{t.raw('PROJECT_TIMBERWOLF_PRINT_TEXT')}</MarkdownText>
           </ProjectTextContainer>
         </Project>
       </ProjectContainer>
