@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import profilePicture from '../../assets/img/jpg/erik-welander-2.jpg';
+import { MarkdownTextStyle } from '../globals/styles';
 import {
   COLOR_GRAY_BORDER,
   COLOR_WHITE_BACKGROUND,
@@ -233,6 +234,7 @@ export const ProfileArrowContactTextStyle = styled.span`
 
 export const CVContainerStyle = styled.div`
   font-weight: 400;
+  line-height: 1.4;
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     font-size: 16px;
@@ -241,13 +243,10 @@ export const CVContainerStyle = styled.div`
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
     font-size: 18px;
   }
-
-  /* Preserve newlines */
-  white-space: pre-line;
 `;
 
 export const CVSectionContainerTopMarginStyle = styled.div`
-  margin-top: 60px;
+  margin-top: 40px;
 `;
 
 export const CVSectionDownloadImageStyle = styled(Image)`
@@ -299,6 +298,7 @@ export const CVSectionBubbleStyle = styled.div`
 `;
 
 export const CVSectionBubbleTransparentStyle = styled.div`
+  margin-block: 24px;
   border-radius: 20px;
   padding: 4px 20px;
   width: fit-content;
@@ -353,7 +353,7 @@ export const CVSectionTableContainerStyle = styled.div`
 export const CVSectionTableStyle = styled.table`
   margin-top: 20px;
   width: 100%;
-  border-spacing: 0 5px;
+  border-spacing: 0;
 `;
 
 export const CVSectionColumnPeriodStyle = styled.td`
@@ -373,6 +373,10 @@ export const CVSectionColumnPeriodStyle = styled.td`
 `;
 
 export const CVSectionRowContentStyle = styled.tr`
+  &:not(:last-child) > td:last-child {
+    padding-bottom: 24px;
+  }
+
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     display: grid;
   }
@@ -405,7 +409,6 @@ export const CVSectionCompanyStyle = styled.div`
 
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     font-size: 16px;
-    margin-bottom: 8px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
@@ -431,8 +434,6 @@ export const CVSectionPositionTags = styled.div`
 `;
 
 export const CVSectionPositionText = styled.div`
-  margin-bottom: 20px;
-
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
     font-size: 16px;
   }
@@ -442,6 +443,13 @@ export const CVSectionPositionText = styled.div`
     width: 85%;
   }
 
-  /* Preserve newlines */
-  white-space: pre-line;
+  ${MarkdownTextStyle} {
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 0.5em;
+    }
+  }
 `;

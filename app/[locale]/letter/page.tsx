@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { DownloadPDFImage, DownloadPDFText, LetterContainer, LetterHeader } from '../../../components/letter/styles';
+import { LetterBody, LetterContainer, LetterHeader } from '../../../components/letter/styles';
 import {
   ProfileArrowContentStyle,
   ProfileArrowStyle,
@@ -11,6 +11,9 @@ import {
   ProfileArrowOccupationStyle,
   ProfileQuoteStyle,
   InitialContentSpacingStyle,
+  CVSectionBubbleTransparentStyle,
+  CVSectionDownloadImageStyle,
+  CVSectionDownloadTextStyle,
 } from '../../../components/resume/styles';
 import { ContactItem } from '../../../components/resume/components';
 import { SkillsListContainer, UnstyledCommaList } from '../../../components/globals/styles';
@@ -88,16 +91,16 @@ export default async function Letter({ params }: { params: Promise<{ locale: str
         </ProfileArrowContentStyle>
       </ProfileContainerStyle>
       <LetterContainer>
-        <br />
-        <br />
-        <a href={`/pdf/erik-welander-letter-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
-          <DownloadPDFImage src={downloadIcon} alt={'Download'} />
-          <DownloadPDFText>{t('DOWNLOAD_PDF')}</DownloadPDFText>
-        </a>
-        <br />
-        <br />
-        <LetterHeader>{t('HI')}!</LetterHeader>
-        <MarkdownText>{tr.raw('LETTER_TEXT')}</MarkdownText>
+        <CVSectionBubbleTransparentStyle>
+          <a href={`/pdf/erik-welander-letter-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
+            <CVSectionDownloadImageStyle src={downloadIcon} alt={'Download'} />
+            <CVSectionDownloadTextStyle>{t('DOWNLOAD_PDF')}</CVSectionDownloadTextStyle>
+          </a>
+        </CVSectionBubbleTransparentStyle>
+        <LetterBody>
+          <LetterHeader>{tr('LETTER_GREETING')}</LetterHeader>
+          <MarkdownText>{tr.raw('LETTER_TEXT')}</MarkdownText>
+        </LetterBody>
       </LetterContainer>
     </>
   );

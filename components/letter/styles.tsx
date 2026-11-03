@@ -1,57 +1,37 @@
 'use client';
 
-import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
+import { MarkdownTextStyle } from '../globals/styles';
+import { CVContainerStyle } from '../resume/styles';
 
-import { SIZE_PAD_IPAD_PORTRAIT, SIZE_PHONE_PORTRAIT, SIZE_PC_LANDSCAPE } from '../globals/constants';
+import { SIZE_PAD_IPAD_PORTRAIT, SIZE_PHONE_PORTRAIT } from '../globals/constants';
 
-export const LetterContainer = styled.div`
-  font-weight: 400;
+export const LetterContainer = styled(CVContainerStyle)`
+  ${MarkdownTextStyle} {
+    p {
+      margin: 0;
+    }
 
-  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 16px;
-  }
-
-  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    font-size: 18px;
-  }
-
-  /* Preserve newlines */
-  white-space: pre-line;
-`;
-
-const IMAGE_SIZE = 36;
-export const DownloadPDFImage = styled(Image)`
-  width: ${IMAGE_SIZE}px;
-  height: auto;
-  vertical-align: middle;
-
-  @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    width: ${IMAGE_SIZE - 14}px;
-  }
-
-  @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    width: ${IMAGE_SIZE - 10}px;
-  }
-
-  @media (min-width: ${SIZE_PC_LANDSCAPE}px) {
-    width: ${IMAGE_SIZE - 5}px;
+    p + p {
+      margin-top: 0.5em;
+    }
   }
 `;
 
-export const DownloadPDFText = styled.span`
-  margin-left: 10px;
-  vertical-align: middle;
-  text-decoration: underline;
+export const LetterBody = styled.div`
+  width: 95%;
+  margin: 0 auto 24px;
 `;
 
 export const LetterHeader = styled.h1`
+  font-weight: 400;
+  margin-bottom: 8px;
+
   @media (min-width: ${SIZE_PHONE_PORTRAIT}px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   @media (min-width: ${SIZE_PAD_IPAD_PORTRAIT}px) {
-    font-size: 28px;
+    font-size: 22px;
   }
 `;

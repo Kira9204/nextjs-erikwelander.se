@@ -103,16 +103,12 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
         </ProfileArrowContentStyle>
       </ProfileContainerStyle>
       <CVContainerStyle>
-        <br />
-        <br />
         <CVSectionBubbleTransparentStyle>
           <a href={`/pdf/erik-welander-cv-${l.toLowerCase()}.pdf`} target={'_blank'} rel="noreferrer">
             <CVSectionDownloadImageStyle src={downloadIcon} alt={'Download'} />
             <CVSectionDownloadTextStyle>{t('DOWNLOAD_PDF')}</CVSectionDownloadTextStyle>
           </a>
         </CVSectionBubbleTransparentStyle>
-        <br />
-        <br />
         <CVSectionContainerStyle>
           <CVSectionBubbleStyle>
             <CVSectionBubbleImageStyle src={portfolioIcon} alt={'Portfolio'} />
@@ -158,7 +154,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     link: 'https://riada.se/',
                   },
                   {
-                    name: 'Mindville AB',
+                    name: tr('RESUME_SECTION_WORK_EXPERIENCE_ATLASSIAN_INSIGHT_MINDVILLE'),
                     link: 'https://www.mindville.com/',
                   },
                   {
@@ -228,7 +224,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 title={tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2015_TITLE')}
                 companies={[
                   {
-                    name: 'Academic Work',
+                    name: tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_AGENCY'),
                     link: 'https://www.academicwork.com/',
                   },
                   {
@@ -245,7 +241,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 title={tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2014_TITLE')}
                 companies={[
                   {
-                    name: 'Academic Work',
+                    name: tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_AGENCY'),
                     link: 'https://www.academicwork.com/',
                   },
                   {
@@ -262,7 +258,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 title={tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_2013_TITLE')}
                 companies={[
                   {
-                    name: 'Academic Work',
+                    name: tr('RESUME_SECTION_WORK_EXPERIENCE_FUJITSU_AGENCY'),
                     link: 'https://www.academicwork.com/',
                   },
                   {
@@ -307,7 +303,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 title={tr('RESUME_SECTION_EDUCATION_SYSTEMS_ENGINEER_TITLE')}
                 companies={[
                   {
-                    name: 'YHC3L (Centrum För Livslångt Lärande)',
+                    name: tr('RESUME_SECTION_EDUCATION_SYSTEMS_ENGINEER_INSTITUTION'),
                     link: 'https://yhc3l.se/',
                   },
                 ]}
@@ -320,7 +316,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 title={tr('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_TITLE')}
                 companies={[
                   {
-                    name: 'Stockholm university',
+                    name: tr('RESUME_SECTION_EDUCATION_COMPUTER_SCIENCE_INSTITUTION'),
                     link: 'http://www.su.se/',
                   },
                 ]}
@@ -341,7 +337,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                 title={tr('RESUME_SECTION_EDUCATION_TECHNOLOGY_PROGRAMMING_NETWORKS_TITLE')}
                 companies={[
                   {
-                    name: 'THG',
+                    name: tr('RESUME_SECTION_EDUCATION_TECHNOLOGY_PROGRAMMING_NETWORKS_INSTITUTION'),
                     link: 'https://thorildsplansgymnasium.stockholm.se/',
                   },
                 ]}
@@ -373,7 +369,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
                     link: 'https://ix.ufs.se/',
                   },
                   {
-                    name: 'Unga forskare stockholm',
+                    name: tr('RESUME_SECTION_NON_PROFIT_IX_BOARD_MEMBER_ORGANIZATION'),
                     link: 'https://ufs.se/',
                   },
                 ]}
