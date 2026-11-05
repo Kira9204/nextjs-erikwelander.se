@@ -449,7 +449,7 @@ export const CVSectionPositionText = styled.div`
     }
 
     p + p {
-      margin-top: 0.5em;
+      margin-top: 0.4em;
     }
   }
 `;

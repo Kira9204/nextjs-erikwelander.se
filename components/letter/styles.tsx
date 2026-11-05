@@ -13,7 +13,7 @@ export const LetterContainer = styled(CVContainerStyle)`
     }
 
     p + p {
-      margin-top: 0.5em;
+      margin-top: 0.4em;
     }
   }
 `;

@@ -120,7 +120,7 @@ export default async function Resume({ params }: { params: Promise<{ locale: str
           <CVSectionTableStyle>
             <tbody>
               <CVRow
-                period={'2022-06 -> 2027-03'}
+                period={'2022-06 -> 2027-02'}
                 title={tr('RESUME_SECTION_WORK_EXPERIENCE_VOLVO_CARS_TITLE')}
                 companies={[
                   {
